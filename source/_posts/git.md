@@ -5,14 +5,14 @@ tags:
 - git
 ---
 
-#### 用户配置
+用户配置
 
 ```
 git config --global user.name "name"
 git config --global user.email 123@xxx.com
 ```
 
-#### 配置级别
+配置级别
 
 `--local` [默认]：优先级高，只影响本仓库
 

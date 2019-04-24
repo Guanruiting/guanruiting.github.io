@@ -48,17 +48,20 @@ git push origin hexo
 
 ```
 ### 8、执行以下命令生成网站并部署到GitHub（常用）
+
  ```
  hexo g -d
- ``` 
+ ```
  
+
 ------------------------华丽丽的分割线-------------------------
  
 如果想在其他电脑上修改博客，可以使用下列步骤：
 
-1. 使用git clone 拷贝仓库（默认分支hexo）
+- 使用git clone 拷贝仓库（默认分支hexo）
 
-2. 在本地新拷贝的文件夹下通过Git bash依次执行下列指令：
+- 在本地新拷贝的文件夹下通过Git bash依次执行下列指令：
+
 
 ```
 npm install hexo
@@ -70,4 +73,3 @@ npm install hexo-deployer-git
 // 记得，不需要hexo init这条指令
 
 ```
-
