@@ -4,6 +4,7 @@ menu:
   主页: /
   HTML: /tags/HTML/
   CSS: /tags/CSS
+  Javascript: /tags/Javascript
 
 # SubNav
 subnav:
@@ -108,7 +109,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: true
+  showTags: false
 
 # 智能菜单
 # 如不需要，将该对应项置为false
@@ -118,13 +119,13 @@ slider:
 smart_menu:
   innerArchive: '所有文章'
   friends: '链接'
-  aboutme: '关于我'
+  aboutme: '联系我'
 
 friends:
   百度搜索: http://www.baidu.com/
   Hexo: https://hexo.io/zh-cn/docs/
   Markdown语法: https://www.appinn.com/markdown/
-  Javascript在线教程: https://wangdoc.com/javascript/
+  阮一峰JS教程: https://wangdoc.com/javascript/
   在线作图: https://www.processon.com/
   segmentfault: https://segmentfault.com/
   segmentfault前端: https://segmentfault.com/channel/frontend
@@ -133,11 +134,11 @@ friends:
   千图网: https://www.58pic.com/
   有道云笔记: https://note.youdao.com
   网易云课堂: https://study.163.com/
-  前端大牛（张鑫旭）: https://www.zhangxinxu.com/
+  张鑫旭前端博客: https://www.zhangxinxu.com/
   凹凸实验室: https://aotu.io/
   在线代码格式化: http://tool.oschina.net/codeformat/json
 
 
 
 
-aboutme: 一个小前端<br>2019年开始接触互联网，<br>可惜至今一无所成，除了有一份还不错的工作。<br>大学原来学日语专业的，<br>但目前日语仅用于自娱自乐，听歌看动漫。<br>85后女汉子<br>两个小孩的妈妈啦！<br>座右铭：吃得苦中苦，方为人上人。
+aboutme: 一个小前端<br>2019年开始接触互联网，<br>至今一无所成，除了有一份还不错的工作。<br>85后女汉子，<br>两个小孩的妈妈啦！<br>座右铭：吃得苦中苦，方为人上人。<br> 联系我：188300艾特163.com

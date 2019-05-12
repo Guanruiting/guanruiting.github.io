@@ -5,8 +5,8 @@
 # Site
 title: "Greet's blog"
 subtitle: "每天进步一点点"
-description: "Greet's blog，一个小前端"
-keywords: "前端开发,前端技术"
+description: "Greet's blog，前端技术博客"
+keywords: "前端开发,前端技术，前端博客"
 author: "Greet"
 language: "Zh"
 timezone:
@@ -27,6 +27,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - "plugins/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -41,7 +42,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
