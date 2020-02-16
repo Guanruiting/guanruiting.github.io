@@ -12,7 +12,7 @@ CSS垂直居中是工作中经常遇到的问题，也是前端面试常问问�
 [垂直居中DEMO](https://guanruiting.github.io/demo/css-vurtical-centering.html)
 <!-- more -->
 
-![CSS垂直居中DEMO](/img/201905/QQ20190512-095051.png)
+![CSS垂直居中DEMO](/img/2019/05/QQ20190512-095051.png)
 
 上图用到了5种方法居中：
 

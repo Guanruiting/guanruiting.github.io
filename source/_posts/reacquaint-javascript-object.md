@@ -18,7 +18,7 @@ tags:
 
 ## Object的属性
 
-![Object propertype](/img/201904/object_propertype.png)
+![Object propertype](/img/2019/04/object_propertype.png)
 
 #### Object.propertype表示Object的原型对象。Object.propertype属性的属性特性就是所谓的**属性描述对象**了。
 
@@ -64,7 +64,7 @@ tags:
 
 ## Object的方法
 
-![Object propertype](/img/201904/object_function.png)
+![Object propertype](/img/2019/04/object_function.png)
 
 这么多的方法，真是吓到我了！一下子也学不完呀，粗略地过一遍咯？先混个眼熟😂。
 

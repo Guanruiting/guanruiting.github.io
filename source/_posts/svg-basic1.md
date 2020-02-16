@@ -67,7 +67,7 @@ align 参数控制 viewBox 是否强制进行均匀的缩放。
 |YMid|viewBox 的 Y 轴中点对齐 viewport 的 Y 轴中点|
 |YMax|viewBox 的最小 Y 值对齐 viewport 的底边|
 
-![SVG preserveAspectRatio align 参数图解](/img/201908/Screen Shot 2019-08-12 at 01.19.47.png)
+![SVG preserveAspectRatio align 参数图解](/img/2019/08/Screen Shot 2019-08-12 at 01.19.47.png)
 
 align 参数的3x3种组合取值
 

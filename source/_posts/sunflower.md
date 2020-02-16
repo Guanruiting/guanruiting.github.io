@@ -10,7 +10,7 @@ tags:
 
 <!-- more -->
 
-![向日葵](/img/201904/sunflower.png)
+![向日葵](/img/2019/04/sunflower.png)
 
 HTML代码：
 

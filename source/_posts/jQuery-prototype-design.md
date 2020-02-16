@@ -33,7 +33,7 @@ tags:
 我们在项目中引入jQuery框架后，可以通过`$.`或者`jQuery.`使用它提供的方法。这在jQuery中是怎么实现的呢？
 jQuery共享原型设计：
 
-![](/img/201904/jquery_prototype_design.png)
+![](/img/2019/04/jquery_prototype_design.png)
 
 ```
 (function(root){ 
