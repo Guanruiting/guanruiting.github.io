@@ -103,4 +103,7 @@ theme: prontera
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/macshion/macshion.github.io # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: master
+  message: deploy
