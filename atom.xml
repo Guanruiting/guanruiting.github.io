@@ -6,7 +6,7 @@
   <link href="https://macshion.github.io/atom.xml" rel="self"/>
   
   <link href="https://macshion.github.io/"/>
-  <updated>2021-01-08T08:35:30.651Z</updated>
+  <updated>2021-01-08T08:40:22.384Z</updated>
   <id>https://macshion.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tutorial: Learn how Gatsby works</title>
+    <link href="https://macshion.github.io/20201229/LearnhowGatsbyworks/"/>
+    <id>https://macshion.github.io/20201229/LearnhowGatsbyworks/</id>
+    <published>2020-12-29T11:05:11.749Z</published>
+    <updated>2021-01-08T08:40:22.384Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;The goal of this tutorial is to guide you through setting up and deploying your first Gatsby site. Along the way, you’ll learn some</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
+    
+    <category term="Gatsby" scheme="https://macshion.github.io/tags/Gatsby/"/>
+    
+    <category term="SSR" scheme="https://macshion.github.io/tags/SSR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Use the JavaScript Fetch API to Get Data</title>
+    <link href="https://macshion.github.io/20201229/JavaScriptFetchAPI/"/>
+    <id>https://macshion.github.io/20201229/JavaScriptFetchAPI/</id>
+    <published>2020-12-29T11:05:11.747Z</published>
+    <updated>2021-01-08T08:38:56.787Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;There was a time when &lt;code&gt;XMLHttpRequest&lt;/code&gt; was used to make API requests. It didn’t include promises, and it didn’t make for clean JavaScript code. Using jQuery, you used the cleaner syntax with &lt;code&gt;jQuery.ajax()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, JavaScript has its own built-in way to make API requests. This is the Fetch API, a new standard to make server requests with promises, but includes many other features.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you will create both GET and POST requests using the Fetch API.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
+    
+    <category term="Fetch" scheme="https://macshion.github.io/tags/Fetch/"/>
+    
+    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
+    
+  </entry>
   
   <entry>
     <title>How to Make React SEO-Friendly: an Extensive SEO Guide</title>
@@ -42,42 +92,6 @@
     <category term="Nextjs" scheme="https://macshion.github.io/tags/Nextjs/"/>
     
     <category term="Gatsby" scheme="https://macshion.github.io/tags/Gatsby/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://macshion.github.io/20201225/LearnhowGatsbyworks/"/>
-    <id>https://macshion.github.io/20201225/LearnhowGatsbyworks/</id>
-    <published>2020-12-25T02:14:01.365Z</published>
-    <updated>2020-12-25T02:14:01.365Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>How To Use the JavaScript Fetch API to Get Data</title>
-    <link href="https://macshion.github.io/20201223/JavaScriptFetchAPI/"/>
-    <id>https://macshion.github.io/20201223/JavaScriptFetchAPI/</id>
-    <published>2020-12-23T02:55:12.644Z</published>
-    <updated>2020-12-23T03:20:43.569Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;There was a time when &lt;code&gt;XMLHttpRequest&lt;/code&gt; was used to make API requests. It didn’t include promises, and it didn’t make for clean JavaScript code. Using jQuery, you used the cleaner syntax with &lt;code&gt;jQuery.ajax()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Now, JavaScript has its own built-in way to make API requests. This is the Fetch API, a new standard to make server requests with promises, but includes many other features.&lt;/p&gt;
-&lt;p&gt;In this tutorial, you will create both GET and POST requests using the Fetch API.&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
-    
-    <category term="Fetch" scheme="https://macshion.github.io/tags/Fetch/"/>
-    
-    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
     
   </entry>
   
