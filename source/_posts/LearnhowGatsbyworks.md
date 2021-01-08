@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Learn how Gatsby works
+title: 'Tutorial: Learn how Gatsby works'
 time: 2020-12-25 20:32:00
 tags:
 - Gatsby
