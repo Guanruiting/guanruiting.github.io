@@ -4,7 +4,7 @@ date: 2019-04-16 01:58:09
 tags:
 - Hexo
 - Github
-- 博客
+category: Blog
 ---
 
 
@@ -34,9 +34,9 @@ tags:
  npm install hexo-deployer-git
  
  ```
- 
+
 提示：如果执行 ` hexo init ` 命令时报文件夹不能为空的错误，可以先在本地一个空文件夹执行第一、二条命令，执行完后把文件夹里的东西拷贝过来再往下执行
- 
+
 6、修改_config.yml中的deploy参数，为master
 
 ### 7、Hexo分支执行以下命令提交代码以备份(常用)
@@ -52,10 +52,10 @@ git push origin hexo
  ```
  hexo g -d
  ```
- 
+
 
 ------------------------华丽丽的分割线-------------------------
- 
+
 如果想在其他电脑上修改博客，可以使用下列步骤：
 
 - 使用git clone 拷贝仓库（默认分支hexo）

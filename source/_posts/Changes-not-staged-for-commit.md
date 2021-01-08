@@ -2,8 +2,8 @@
 title: 使用“git add .”命令提交代码后仍报错：“Changes not staged for commit”
 date: 2019-04-16 03:33:29
 tags:
-- git
-- github
+- Git
+- Github
 ---
 
 github仓库，本地删除了文件，使用  ` git add . `  命令提交代码后仍报错：

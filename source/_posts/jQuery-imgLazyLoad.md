@@ -2,8 +2,8 @@
 title: '基于jQuery开发一个图片懒加载插件'
 date: 2019-05-25 20:40:44
 tags:
-	jQuery
-	Javascript
+- jQuery
+- Javascript
 ---
 
 图片懒加载（LazyLoad）一直是前端的优化方案之一。

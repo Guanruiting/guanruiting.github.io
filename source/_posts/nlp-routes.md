@@ -2,11 +2,15 @@
 title: NLP自然语言处理学习路线
 date: 2020-12-17 20:21:35
 tags:
+- NLP
+- English
 ---
 
 
 
 `nlp-roadmap` is `Natural Language Processing` **ROADMAP(Mind Map)** and **KEYWORD** for students those who have interest in learning Natural Language Processing. The roadmap covers the materials from basic probability/statistics to SOTA NLP models.
+
+<!--more-->
 
 #### [Caution!](https://github.com/graykode/nlp-roadmap#caution)
 

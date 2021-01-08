@@ -2,7 +2,7 @@
 title: git config配置用户
 date: 2019-04-17 22:14:10
 tags:
-- git
+- Git
 ---
 
 用户配置

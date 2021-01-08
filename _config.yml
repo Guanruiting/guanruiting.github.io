@@ -69,7 +69,7 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-tag_map:
+tag_map: tags
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -98,7 +98,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: prontera
+# theme: prontera
+theme: oranges
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -107,3 +108,16 @@ deploy:
   repo: https://github.com/macshion/macshion.github.io # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: master
   message: deploy
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:

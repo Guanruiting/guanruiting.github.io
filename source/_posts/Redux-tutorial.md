@@ -1,7 +1,10 @@
 ---
 title: Redux tutorial
 date: 2020-11-18 18:12:36
-tags: React,redux
+tags: 
+- React
+- Redux
+- English
 ---
 
 ## Tutorial 0 - introduction
@@ -371,7 +374,7 @@ important things to pay attention to in the last example:
        are completely overwritten - as opposed to gracefully merged - by first level property of
        { message: action.value }). But if we had a more complex / nested data structure, you might choose
        to handle your state's updates very differently:
-
+    
        - using Immutable.js (https://facebook.github.io/immutable-js/)
        - using Object.assign (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
        - using manual merge
