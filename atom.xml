@@ -6,7 +6,7 @@
   <link href="https://macshion.github.io/atom.xml" rel="self"/>
   
   <link href="https://macshion.github.io/"/>
-  <updated>2021-01-08T08:40:22.384Z</updated>
+  <updated>2021-02-25T06:43:34.121Z</updated>
   <id>https://macshion.github.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Youtube-ltc下载油管和B站视频</title>
+    <link href="https://macshion.github.io/20210225/Youtube-ltc%E4%B8%8B%E8%BD%BD%E6%B2%B9%E7%AE%A1%E5%92%8CB%E7%AB%99%E8%A7%86%E9%A2%91/"/>
+    <id>https://macshion.github.io/20210225/Youtube-ltc%E4%B8%8B%E8%BD%BD%E6%B2%B9%E7%AE%A1%E5%92%8CB%E7%AB%99%E8%A7%86%E9%A2%91/</id>
+    <published>2021-02-25T06:43:34.121Z</published>
+    <updated>2021-02-25T06:43:34.121Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Youtube-lt是一个用Python开发的命令行下载工具，支持下载youtube、Bilibili等网站的视频。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Tools" scheme="https://macshion.github.io/tags/Tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微前端探索</title>
+    <link href="https://macshion.github.io/20210225/micro-frontend/"/>
+    <id>https://macshion.github.io/20210225/micro-frontend/</id>
+    <published>2021-02-25T02:44:54.000Z</published>
+    <updated>2021-02-25T06:42:53.381Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;转自张泰峰的博客《微前端大赏》&lt;/p&gt;
+&lt;p&gt;一、&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="微前端" scheme="https://macshion.github.io/tags/%E5%BE%AE%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typescript手册指南阅读笔记 - 类型与接口</title>
+    <link href="https://macshion.github.io/20201229/Typescript-type-and-interface/"/>
+    <id>https://macshion.github.io/20201229/Typescript-type-and-interface/</id>
+    <published>2020-12-29T11:05:11.753Z</published>
+    <updated>2021-01-08T07:50:50.613Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;TypeScript支持与JavaScript几乎相同的数据类型。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Typescript" scheme="https://macshion.github.io/tags/Typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>Tutorial: Learn how Gatsby works</title>
@@ -96,49 +161,11 @@
   </entry>
   
   <entry>
-    <title>Typescript手册指南阅读笔记 - 类型与接口</title>
-    <link href="https://macshion.github.io/20201222/Typescript-type-and-interface/"/>
-    <id>https://macshion.github.io/20201222/Typescript-type-and-interface/</id>
-    <published>2020-12-22T01:52:31.501Z</published>
-    <updated>2020-12-23T02:55:08.227Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;TypeScript支持与JavaScript几乎相同的数据类型。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Typescript" scheme="https://macshion.github.io/tags/Typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How To Use Axios with React</title>
-    <link href="https://macshion.github.io/20201221/HowToUseAxioswithReact/"/>
-    <id>https://macshion.github.io/20201221/HowToUseAxioswithReact/</id>
-    <published>2020-12-21T09:43:18.263Z</published>
-    <updated>2020-12-21T10:00:00.441Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;Many projects on the web need</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>清华大学刘知远：自然语言理解难在哪儿？</title>
     <link href="https://macshion.github.io/20201218/NLP-difficult/"/>
     <id>https://macshion.github.io/20201218/NLP-difficult/</id>
     <published>2020-12-18T04:03:36.000Z</published>
-    <updated>2020-12-21T10:04:55.594Z</updated>
+    <updated>2020-12-29T11:05:11.751Z</updated>
     
     
     <summary type="html">&lt;p&gt;在微博和知乎上关注&lt;strong&gt;自然语言处理（NLP）&lt;/strong&gt;技术的朋友，应该都对**#NLP太难了#&lt;strong&gt;、&lt;/strong&gt;#自然语言理解太难了#**两个话题标签不陌生，其下汇集了各种不仅难煞计算机、甚至让人也发懵的费解句子或歧义引起的笑话。然而，这些例子只是让人直觉计算机理解人类语言太难了，NLP到底难在哪里，还缺少通俗易懂的介绍。&lt;/p&gt;</summary>
@@ -155,7 +182,7 @@
     <link href="https://macshion.github.io/20201217/nlp-routes/"/>
     <id>https://macshion.github.io/20201217/nlp-routes/</id>
     <published>2020-12-17T12:21:35.000Z</published>
-    <updated>2020-12-23T03:21:26.954Z</updated>
+    <updated>2020-12-29T11:05:11.762Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;code&gt;nlp-roadmap&lt;/code&gt; is &lt;code&gt;Natural Language Processing&lt;/code&gt; &lt;strong&gt;ROADMAP(Mind Map)&lt;/strong&gt; and &lt;strong&gt;KEYWORD&lt;/strong&gt; for students those who have interest in learning Natural Language Processing. The roadmap covers the materials from basic probability/statistics to SOTA NLP models.&lt;/p&gt;</summary>
@@ -163,9 +190,9 @@
     
     
     
-    <category term="NLP" scheme="https://macshion.github.io/tags/NLP/"/>
-    
     <category term="English" scheme="https://macshion.github.io/tags/English/"/>
+    
+    <category term="NLP" scheme="https://macshion.github.io/tags/NLP/"/>
     
   </entry>
   
@@ -174,7 +201,7 @@
     <link href="https://macshion.github.io/20201216/Typora-PicGo-Github/"/>
     <id>https://macshion.github.io/20201216/Typora-PicGo-Github/</id>
     <published>2020-12-16T10:09:27.000Z</published>
-    <updated>2020-12-23T03:22:22.482Z</updated>
+    <updated>2020-12-29T11:05:11.754Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用Typora+PicGo可以在Markdown写作过程中非常方便快速地插入图片。&lt;/p&gt;</summary>
@@ -191,7 +218,7 @@
     <link href="https://macshion.github.io/20201216/How-To-Use-Styled-Components-In-React/"/>
     <id>https://macshion.github.io/20201216/How-To-Use-Styled-Components-In-React/</id>
     <published>2020-12-16T04:58:09.000Z</published>
-    <updated>2020-12-23T03:31:04.146Z</updated>
+    <updated>2020-12-29T11:05:11.745Z</updated>
     
     
     <summary type="html">&lt;p&gt;While the component-driven approach has ushered in a new frontier in the way we build web applications, it isn’t without its imperfections — one being its usability and scalability with CSS. This has given birth to a new way to construct and manage our styles in a &lt;strong&gt;component-specific&lt;/strong&gt; manner, otherwise knows as CSS-in-JS.&lt;/p&gt;</summary>
@@ -199,9 +226,9 @@
     
     
     
-    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
-    
     <category term="English" scheme="https://macshion.github.io/tags/English/"/>
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
     
   </entry>
   
@@ -210,7 +237,7 @@
     <link href="https://macshion.github.io/20201119/chrome-extensions/"/>
     <id>https://macshion.github.io/20201119/chrome-extensions/</id>
     <published>2020-11-19T09:57:50.000Z</published>
-    <updated>2020-12-23T03:22:12.427Z</updated>
+    <updated>2020-12-29T11:05:11.756Z</updated>
     
     
     <summary type="html">&lt;p&gt;作为前端程序员，日常太多时间花在浏览器上了，把它用到极致吧！&lt;/p&gt;
@@ -228,7 +255,7 @@
     <link href="https://macshion.github.io/20201118/Redux-tutorial/"/>
     <id>https://macshion.github.io/20201118/Redux-tutorial/</id>
     <published>2020-11-18T10:12:36.000Z</published>
-    <updated>2020-12-23T03:31:58.084Z</updated>
+    <updated>2020-12-29T11:05:11.752Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Tutorial-0-introduction&quot;&gt;&lt;a href=&quot;#Tutorial-0-introduction&quot; class=&quot;headerlink&quot; title=&quot;Tutorial 0 - introduction&quot;&gt;&lt;/a&gt;Tutorial 0 - introduction&lt;/h2&gt;&lt;p&gt;Why this tutorial?&lt;br&gt;While trying to learn Redux, I realized that I had accumulated incorrect knowledge about flux through&lt;br&gt;articles I read and personal experience. I don’t mean that articles about flux are not well written&lt;br&gt;but I just didn’t grasp concepts correctly. In the end, I was just applying documentation of different&lt;br&gt;flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read&lt;br&gt;about (actions / actions creators, store, dispatcher, etc).&lt;/p&gt;</summary>
@@ -236,9 +263,9 @@
     
     
     
-    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
-    
     <category term="English" scheme="https://macshion.github.io/tags/English/"/>
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
     
     <category term="Redux" scheme="https://macshion.github.io/tags/Redux/"/>
     
@@ -249,7 +276,7 @@
     <link href="https://macshion.github.io/20190812/svg-basic1/"/>
     <id>https://macshion.github.io/20190812/svg-basic1/</id>
     <published>2019-08-11T16:09:12.000Z</published>
-    <updated>2020-11-18T02:16:49.911Z</updated>
+    <updated>2020-12-29T11:05:11.765Z</updated>
     
     
     <summary type="html">&lt;p&gt;SVG 是可缩放矢量图形（Scalable Vector Graphics, SVG），一种用来描述二维矢量图形的 XML 标记语言。SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失。SVG是万维网联盟的标准，与诸如 DOM 和 XSL 之类的 W3C 标准是一个整体。&lt;/p&gt;</summary>
@@ -266,7 +293,7 @@
     <link href="https://macshion.github.io/20190811/June&amp;July-2019/"/>
     <id>https://macshion.github.io/20190811/June&amp;July-2019/</id>
     <published>2019-08-11T00:17:06.000Z</published>
-    <updated>2020-12-23T09:51:38.226Z</updated>
+    <updated>2020-12-29T11:05:11.748Z</updated>
     
     
     <summary type="html">&lt;p&gt;5月28日换了新工作，直到现在才差不多适应过来。有两个多月没更新博客了，我几乎忘了怎样用Hexo发布新文章了😓。六七月大概是在学VUE的课程，在语雀做的学习笔记。为什么选择在语雀做笔记呢？因为屏幕截图可以直接粘贴，结构导航体验很好。以下是我做的VUE笔记：&lt;/p&gt;</summary>
@@ -283,7 +310,7 @@
     <link href="https://macshion.github.io/20190525/jQuery-imgLazyLoad/"/>
     <id>https://macshion.github.io/20190525/jQuery-imgLazyLoad/</id>
     <published>2019-05-25T12:40:44.000Z</published>
-    <updated>2020-12-23T03:21:45.875Z</updated>
+    <updated>2020-12-29T11:05:11.760Z</updated>
     
     
     <summary type="html">&lt;p&gt;图片懒加载（LazyLoad）一直是前端的优化方案之一。&lt;/p&gt;
@@ -292,9 +319,9 @@
     
     
     
-    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
     <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
+    
+    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
     
   </entry>
   
@@ -303,7 +330,7 @@
     <link href="https://macshion.github.io/20190512/css-vertical-centering/"/>
     <id>https://macshion.github.io/20190512/css-vertical-centering/</id>
     <published>2019-05-12T01:41:47.000Z</published>
-    <updated>2020-12-23T03:21:58.918Z</updated>
+    <updated>2020-12-29T11:05:11.756Z</updated>
     
     
     <summary type="html">&lt;p&gt;CSS垂直居中是工作中经常遇到的问题，也是前端面试常问问题。&lt;/p&gt;
@@ -321,7 +348,7 @@
     <link href="https://macshion.github.io/20190427/jQuery-extend/"/>
     <id>https://macshion.github.io/20190427/jQuery-extend/</id>
     <published>2019-04-27T08:13:44.000Z</published>
-    <updated>2020-11-18T02:16:49.907Z</updated>
+    <updated>2020-12-29T11:05:11.759Z</updated>
     
     
     <summary type="html">&lt;p&gt;jQuery.extend() 函数用于将一个或多个对象的内容合并到target目标对象。如果多个对象具有相同的属性，则后者会覆盖前者的属性值。&lt;/p&gt;</summary>
@@ -329,9 +356,9 @@
     
     
     
-    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
     <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
+    
+    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
     
   </entry>
   
@@ -340,7 +367,7 @@
     <link href="https://macshion.github.io/20190427/jQuery-prototype-design/"/>
     <id>https://macshion.github.io/20190427/jQuery-prototype-design/</id>
     <published>2019-04-27T04:21:47.000Z</published>
-    <updated>2020-11-18T02:16:49.908Z</updated>
+    <updated>2020-12-29T11:05:11.761Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;Javascript立即执行函数&quot;&gt;&lt;a href=&quot;#Javascript立即执行函数&quot; class=&quot;headerlink&quot; title=&quot;Javascript立即执行函数&quot;&gt;&lt;/a&gt;Javascript立即执行函数&lt;/h3&gt;&lt;blockquote&gt;
@@ -350,9 +377,9 @@
     
     
     
-    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
     <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
+    
+    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
     
   </entry>
   
@@ -361,7 +388,7 @@
     <link href="https://macshion.github.io/20190425/reacquaint-javascript-object/"/>
     <id>https://macshion.github.io/20190425/reacquaint-javascript-object/</id>
     <published>2019-04-24T19:11:45.000Z</published>
-    <updated>2020-12-23T03:30:27.139Z</updated>
+    <updated>2020-12-29T11:05:11.764Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近参加了高级前端的培训，虽然是线上课程，但跟着大佬学习真的是事半功倍。课程中出现很多我听不懂的技术词语，比如&lt;a href=&quot;https://guanruiting.github.io/20190418/property-descriptor/&quot;&gt;“属性描述对象”&lt;/a&gt;，比如一些没见过的JS内置方法等等。通过课后查资料补习，我发现自己真的是……基础太差了😓😓😓！&lt;/p&gt;</summary>
@@ -380,7 +407,7 @@
     <link href="https://macshion.github.io/20190420/less-and-atomic-style/"/>
     <id>https://macshion.github.io/20190420/less-and-atomic-style/</id>
     <published>2019-04-20T15:30:07.000Z</published>
-    <updated>2020-12-23T03:25:17.253Z</updated>
+    <updated>2020-12-29T11:05:11.762Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;em&gt;什么是原子样式？&lt;/em&gt;&lt;/p&gt;
@@ -392,34 +419,6 @@
     <category term="CSS" scheme="https://macshion.github.io/tags/CSS/"/>
     
     <category term="Less" scheme="https://macshion.github.io/tags/Less/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初识属性描述对象——元属性</title>
-    <link href="https://macshion.github.io/20190418/property-descriptor/"/>
-    <id>https://macshion.github.io/20190418/property-descriptor/</id>
-    <published>2019-04-18T15:48:42.000Z</published>
-    <updated>2020-12-23T03:30:17.853Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;假设有一个对象：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;var obj &amp;#x3D; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  name:&amp;quot;Book&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;关于这个对象的属性&lt;code&gt;name&lt;/code&gt;，我们提出以下问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;它的值是什么？&lt;/li&gt;
-&lt;li&gt;它的值是否可以修改？&lt;/li&gt;
-&lt;li&gt;它是否可以被 &lt;code&gt;for..in&lt;/code&gt; 循环或者 &lt;code&gt;Object.keys()&lt;/code&gt; 遍历？&lt;/li&gt;
-&lt;li&gt;它是否可以被删除？&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
-    
-    <category term="Object" scheme="https://macshion.github.io/tags/Object/"/>
     
   </entry>
   
