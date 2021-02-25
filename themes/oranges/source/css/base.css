@@ -364,11 +364,11 @@ a:hover {
   padding-bottom: 10px;
 }
 
-.post-details .post-attach {
+.post-details .post-attach,.post-details .post-attach a {
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 30px;
-  color: #666;
+  color: #dfdc05;
 }
 
 .post-content {
