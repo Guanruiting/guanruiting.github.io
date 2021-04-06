@@ -1,10 +1,9 @@
 ---
 title: How To Use Axios with React
-time: 2020-12-21 17:43.43:
+time: 2020-12-21 17:43.43
 tags:
 - Axios
 - React
-- English
 ---
 
 ### Introduction
