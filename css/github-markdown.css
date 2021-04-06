@@ -274,40 +274,6 @@
   margin-bottom: 0;
 }
 
-.markdown-body h1 {
-  font-size: 32px;
-  font-weight: 600;
-}
-
-.markdown-body h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #458e8e
-}
-
-.markdown-body h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #4c959f
-}
-
-.markdown-body h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #5db17f
-}
-
-.markdown-body h5 {
-  font-size: 14px;
-  font-weight: 600;
-  color: #79bf92
-}
-
-.markdown-body h6 {
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .markdown-body p {
   margin-top: 0;
   margin-bottom: 10px;
@@ -483,6 +449,42 @@
   line-height: 1.25;
 }
 
+.markdown-body h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .markdown-body h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #3d9118;
+    padding-top: 0.3em;
+      padding-bottom: 0.3em;
+  }
+  
+  .markdown-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4c959f
+  }
+  
+  .markdown-body h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #5db17f
+  }
+  
+  .markdown-body h5 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #79bf92
+  }
+  
+  .markdown-body h6 {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
 .markdown-body h1 .headerlink,
 .markdown-body h2 .headerlink,
 .markdown-body h3 .headerlink,
@@ -551,11 +553,6 @@
 .markdown-body h1 {
   padding-bottom: 0.3em;
   font-size: 2em;
-}
-
-.markdown-body h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.5em;
 }
 
 .markdown-body h3 {
@@ -643,9 +640,9 @@
 }
 
 .markdown-body img {
-  max-width: 90%;
+  max-width: 99%;
   display: block;
-  margin: 0 auto;
+  margin: 0;
   box-sizing: content-box;
   background-color: #fff;
 }

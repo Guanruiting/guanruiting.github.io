@@ -6,7 +6,7 @@
   <link href="https://macshion.github.io/atom.xml" rel="self"/>
   
   <link href="https://macshion.github.io/"/>
-  <updated>2021-02-25T06:43:34.121Z</updated>
+  <updated>2021-04-06T03:47:06.697Z</updated>
   <id>https://macshion.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using Throttling and Debouncing with React hooks</title>
+    <link href="https://macshion.github.io/20210406/Using-Throttling-and-Debouncing-with-React-hooks/"/>
+    <id>https://macshion.github.io/20210406/Using-Throttling-and-Debouncing-with-React-hooks/</id>
+    <published>2021-04-06T03:34:00.000Z</published>
+    <updated>2021-04-06T03:47:06.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How does UmiJS stack up against Next.js?</title>
+    <link href="https://macshion.github.io/20210325/nextjs-umijs/"/>
+    <id>https://macshion.github.io/20210325/nextjs-umijs/</id>
+    <published>2021-03-25T03:50:39.000Z</published>
+    <updated>2021-03-25T06:32:44.196Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/macshion/PicBed/main/2021/20210325114733.png&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
+    
+    <category term="Umi" scheme="https://macshion.github.io/tags/Umi/"/>
+    
+    <category term="Next" scheme="https://macshion.github.io/tags/Next/"/>
+    
+  </entry>
   
   <entry>
     <title>Youtube-ltc下载油管和B站视频</title>
@@ -380,45 +430,6 @@
     <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
     
     <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重新认识Javascript对象</title>
-    <link href="https://macshion.github.io/20190425/reacquaint-javascript-object/"/>
-    <id>https://macshion.github.io/20190425/reacquaint-javascript-object/</id>
-    <published>2019-04-24T19:11:45.000Z</published>
-    <updated>2020-12-29T11:05:11.764Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近参加了高级前端的培训，虽然是线上课程，但跟着大佬学习真的是事半功倍。课程中出现很多我听不懂的技术词语，比如&lt;a href=&quot;https://guanruiting.github.io/20190418/property-descriptor/&quot;&gt;“属性描述对象”&lt;/a&gt;，比如一些没见过的JS内置方法等等。通过课后查资料补习，我发现自己真的是……基础太差了😓😓😓！&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
-    
-    <category term="Object" scheme="https://macshion.github.io/tags/Object/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Less递归批量生成原子样式（Atomic style）</title>
-    <link href="https://macshion.github.io/20190420/less-and-atomic-style/"/>
-    <id>https://macshion.github.io/20190420/less-and-atomic-style/</id>
-    <published>2019-04-20T15:30:07.000Z</published>
-    <updated>2020-12-29T11:05:11.762Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;em&gt;什么是原子样式？&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;原子样式指的是定义一些常用的基本样式，在标签里通过组合CLASS引用。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://macshion.github.io/tags/CSS/"/>
-    
-    <category term="Less" scheme="https://macshion.github.io/tags/Less/"/>
     
   </entry>
   

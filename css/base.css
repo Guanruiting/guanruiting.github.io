@@ -6,8 +6,9 @@
 html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
-  font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Neue,Noto Sans, Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,'PingFang SC', 'Hiragino Sans GB', '\5B8B\4F53','Microsoft Yahei'"
-  }
+  font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Neue,Noto Sans, Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,'PingFang SC', 'Hiragino Sans GB', '\5B8B\4F53','Microsoft Yahei'";
+  background-color: #f9f9f9;  
+}
 
 body.hidden {
   overflow: hidden;
@@ -59,7 +60,10 @@ a:hover {
 }
 
 .header {
-  padding: 50px 0;
+  margin-bottom: 5px;
+  padding-bottom:25px;
+  padding-top:30px;
+  background-color: #f7f7f7;
 }
 
 .container {
@@ -81,7 +85,7 @@ a:hover {
 
 @media (max-width: 888px) {
   .container {
-    width: 90%;
+    width: 100%;
   }
   .index .post-list,
   .friend-index .friend-list,
@@ -187,6 +191,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding:1rem 0;
+  /* background-color:#f6e5e4; */
+  border-top:1px dashed #ee6e73;
+  border-bottom:1px dashed #ee6e73;
 }
 
 .navbar ul li {
@@ -360,19 +368,19 @@ a:hover {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 600;
-  color: #2f807b;
+  color: #ee6e73;
   padding-bottom: 10px;
 }
 
-.post-details .post-attach {
+.post-details .post-attach,.post-details .post-attach a {
   font-size: 1.4rem;
   text-align: center;
-  padding-bottom: 30px;
-  color: #666;
+  padding-bottom: 50px;
+  color: #dfdc05;
 }
 
 .post-content {
-  padding-bottom: 1rem;
+  padding: 2rem;
 }
 
 .prev-or-next {
@@ -414,6 +422,7 @@ a:hover {
   width: calc(20% - 50px);
   font-size: 1.4rem;
   padding-left: 10px;
+  border-top: 1px dashed #fd958e;
 }
 
 .post-catalog .title {
