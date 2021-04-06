@@ -6,7 +6,7 @@
   <link href="https://macshion.github.io/atom.xml" rel="self"/>
   
   <link href="https://macshion.github.io/"/>
-  <updated>2021-04-06T03:47:06.697Z</updated>
+  <updated>2021-04-06T04:20:10.730Z</updated>
   <id>https://macshion.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How To Use the JavaScript Fetch API to Get Data</title>
+    <link href="https://macshion.github.io/20210406/JavaScriptFetchAPI/"/>
+    <id>https://macshion.github.io/20210406/JavaScriptFetchAPI/</id>
+    <published>2021-04-06T04:20:10.730Z</published>
+    <updated>2021-04-06T04:20:10.730Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;There was a time when &lt;code&gt;XMLHttpRequest&lt;/code&gt; was used to make API requests. It didn’t include promises, and it didn’t make for clean JavaScript code. Using jQuery, you used the cleaner syntax with &lt;code&gt;jQuery.ajax()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, JavaScript has its own built-in way to make API requests. This is the Fetch API, a new standard to make server requests with promises, but includes many other features.&lt;/p&gt;
+&lt;p&gt;In this tutorial, you will create both GET and POST requests using the Fetch API.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
+    
+    <category term="Fetch" scheme="https://macshion.github.io/tags/Fetch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How To Use Axios with React</title>
+    <link href="https://macshion.github.io/20210406/HowToUseAxioswithReact/"/>
+    <id>https://macshion.github.io/20210406/HowToUseAxioswithReact/</id>
+    <published>2021-04-06T04:17:55.024Z</published>
+    <updated>2021-04-06T04:17:55.024Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;Many projects on the web need to interface with a REST API at some stage in their development. &lt;a href=&quot;https://github.com/axios/axios&quot;&gt;Axios&lt;/a&gt; is a lightweight HTTP client based on the &lt;code&gt;$http&lt;/code&gt; service within Angular.js v1.x and is similar to the native JavaScript &lt;a href=&quot;https://www.digitalocean.com/community/tutorials/js-fetch-api&quot;&gt;Fetch API&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Axios is promise-based, which gives you the ability to take advantage of JavaScript’s &lt;code&gt;async&lt;/code&gt; and &lt;code&gt;await&lt;/code&gt; for more readable asynchronous code.&lt;/p&gt;
+&lt;p&gt;You can also intercept and cancel requests, and there’s built-in client-side protection against cross-site request forgery.&lt;/p&gt;
+&lt;p&gt;In this article, you will see examples of how to use Axios to access the popular &lt;a href=&quot;https://jsonplaceholder.typicode.com/&quot;&gt;JSON Placeholder&lt;/a&gt; API within a React application.&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="React" scheme="https://macshion.github.io/tags/React/"/>
+    
+    <category term="Axios" scheme="https://macshion.github.io/tags/Axios/"/>
+    
+  </entry>
   
   <entry>
     <title>Using Throttling and Debouncing with React hooks</title>
@@ -44,7 +87,7 @@
     <link href="https://macshion.github.io/20210325/nextjs-umijs/"/>
     <id>https://macshion.github.io/20210325/nextjs-umijs/</id>
     <published>2021-03-25T03:50:39.000Z</published>
-    <updated>2021-03-25T06:32:44.196Z</updated>
+    <updated>2021-04-06T04:20:59.582Z</updated>
     
     
       
@@ -60,9 +103,9 @@
     
     <category term="React" scheme="https://macshion.github.io/tags/React/"/>
     
-    <category term="Umi" scheme="https://macshion.github.io/tags/Umi/"/>
+    <category term="Nextjs" scheme="https://macshion.github.io/tags/Nextjs/"/>
     
-    <category term="Next" scheme="https://macshion.github.io/tags/Next/"/>
+    <category term="Umi" scheme="https://macshion.github.io/tags/Umi/"/>
     
   </entry>
   
@@ -159,29 +202,6 @@
   </entry>
   
   <entry>
-    <title>How To Use the JavaScript Fetch API to Get Data</title>
-    <link href="https://macshion.github.io/20201229/JavaScriptFetchAPI/"/>
-    <id>https://macshion.github.io/20201229/JavaScriptFetchAPI/</id>
-    <published>2020-12-29T11:05:11.747Z</published>
-    <updated>2021-01-08T08:38:56.787Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h3&gt;&lt;p&gt;There was a time when &lt;code&gt;XMLHttpRequest&lt;/code&gt; was used to make API requests. It didn’t include promises, and it didn’t make for clean JavaScript code. Using jQuery, you used the cleaner syntax with &lt;code&gt;jQuery.ajax()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Now, JavaScript has its own built-in way to make API requests. This is the Fetch API, a new standard to make server requests with promises, but includes many other features.&lt;/p&gt;
-&lt;p&gt;In this tutorial, you will create both GET and POST requests using the Fetch API.&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
-    
-    <category term="Fetch" scheme="https://macshion.github.io/tags/Fetch/"/>
-    
-    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
     <title>How to Make React SEO-Friendly: an Extensive SEO Guide</title>
     <link href="https://macshion.github.io/20201229/HowtoMakeReactSEO-Friendly/"/>
     <id>https://macshion.github.io/20201229/HowtoMakeReactSEO-Friendly/</id>
@@ -232,15 +252,13 @@
     <link href="https://macshion.github.io/20201217/nlp-routes/"/>
     <id>https://macshion.github.io/20201217/nlp-routes/</id>
     <published>2020-12-17T12:21:35.000Z</published>
-    <updated>2020-12-29T11:05:11.762Z</updated>
+    <updated>2021-04-06T04:21:08.966Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;code&gt;nlp-roadmap&lt;/code&gt; is &lt;code&gt;Natural Language Processing&lt;/code&gt; &lt;strong&gt;ROADMAP(Mind Map)&lt;/strong&gt; and &lt;strong&gt;KEYWORD&lt;/strong&gt; for students those who have interest in learning Natural Language Processing. The roadmap covers the materials from basic probability/statistics to SOTA NLP models.&lt;/p&gt;</summary>
     
     
     
-    
-    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
     
     <category term="NLP" scheme="https://macshion.github.io/tags/NLP/"/>
     
@@ -268,15 +286,13 @@
     <link href="https://macshion.github.io/20201216/How-To-Use-Styled-Components-In-React/"/>
     <id>https://macshion.github.io/20201216/How-To-Use-Styled-Components-In-React/</id>
     <published>2020-12-16T04:58:09.000Z</published>
-    <updated>2020-12-29T11:05:11.745Z</updated>
+    <updated>2021-04-06T04:18:27.175Z</updated>
     
     
     <summary type="html">&lt;p&gt;While the component-driven approach has ushered in a new frontier in the way we build web applications, it isn’t without its imperfections — one being its usability and scalability with CSS. This has given birth to a new way to construct and manage our styles in a &lt;strong&gt;component-specific&lt;/strong&gt; manner, otherwise knows as CSS-in-JS.&lt;/p&gt;</summary>
     
     
     
-    
-    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
     
     <category term="React" scheme="https://macshion.github.io/tags/React/"/>
     
@@ -305,15 +321,13 @@
     <link href="https://macshion.github.io/20201118/Redux-tutorial/"/>
     <id>https://macshion.github.io/20201118/Redux-tutorial/</id>
     <published>2020-11-18T10:12:36.000Z</published>
-    <updated>2020-12-29T11:05:11.752Z</updated>
+    <updated>2021-04-06T04:21:21.824Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Tutorial-0-introduction&quot;&gt;&lt;a href=&quot;#Tutorial-0-introduction&quot; class=&quot;headerlink&quot; title=&quot;Tutorial 0 - introduction&quot;&gt;&lt;/a&gt;Tutorial 0 - introduction&lt;/h2&gt;&lt;p&gt;Why this tutorial?&lt;br&gt;While trying to learn Redux, I realized that I had accumulated incorrect knowledge about flux through&lt;br&gt;articles I read and personal experience. I don’t mean that articles about flux are not well written&lt;br&gt;but I just didn’t grasp concepts correctly. In the end, I was just applying documentation of different&lt;br&gt;flux frameworks (Reflux, Flummox, FB Flux) and trying to make them match with the theoretical concept I read&lt;br&gt;about (actions / actions creators, store, dispatcher, etc).&lt;/p&gt;</summary>
     
     
     
-    
-    <category term="English" scheme="https://macshion.github.io/tags/English/"/>
     
     <category term="React" scheme="https://macshion.github.io/tags/React/"/>
     
@@ -360,7 +374,7 @@
     <link href="https://macshion.github.io/20190525/jQuery-imgLazyLoad/"/>
     <id>https://macshion.github.io/20190525/jQuery-imgLazyLoad/</id>
     <published>2019-05-25T12:40:44.000Z</published>
-    <updated>2020-12-29T11:05:11.760Z</updated>
+    <updated>2021-04-06T04:18:59.180Z</updated>
     
     
     <summary type="html">&lt;p&gt;图片懒加载（LazyLoad）一直是前端的优化方案之一。&lt;/p&gt;
@@ -402,27 +416,6 @@
     
     
     <summary type="html">&lt;p&gt;jQuery.extend() 函数用于将一个或多个对象的内容合并到target目标对象。如果多个对象具有相同的属性，则后者会覆盖前者的属性值。&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
-    
-    <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery源码分析：无new构造实例及共享原型对象设计</title>
-    <link href="https://macshion.github.io/20190427/jQuery-prototype-design/"/>
-    <id>https://macshion.github.io/20190427/jQuery-prototype-design/</id>
-    <published>2019-04-27T04:21:47.000Z</published>
-    <updated>2020-12-29T11:05:11.761Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;Javascript立即执行函数&quot;&gt;&lt;a href=&quot;#Javascript立即执行函数&quot; class=&quot;headerlink&quot; title=&quot;Javascript立即执行函数&quot;&gt;&lt;/a&gt;Javascript立即执行函数&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;立即执行函数常用于第三方库，好处在于隔离作用域。作用域隔离非常重要，是一个JS框架必须支持的功能。任何一个第三方库都会存在大量的变量和函数，为了避免变量污染（命名冲突），开发者们想到的解决办法就是使用立即执行函数。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
     
     
     
