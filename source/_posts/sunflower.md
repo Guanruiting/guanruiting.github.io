@@ -14,7 +14,7 @@ tags:
 
 HTML代码：
 
-```
+```html
 <html>
     <head>
         <title>Sunflower</title>
@@ -69,7 +69,7 @@ HTML代码：
 
 CSS代码：
 
-```
+```CSS
 *{margin:0;padding:0;}
 html,body,#wrap{height:100%;}
 #wrap{background: -webkit-linear-gradient(top, #73b2f9, #0b6602);position: relative;}

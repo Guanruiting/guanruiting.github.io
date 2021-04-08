@@ -13,15 +13,15 @@ Youtube-lt是一个用Python开发的命令行下载工具，支持下载youtube
 使用 wget:
 
 ```
-sudo wget https://github.com/blackjack4494/yt-dlc/releases/latest/download/youtube-dlc -O /usr/local/bin/youtube-dlc
-sudo chmod a+rx /usr/local/bin/youtube-dlc
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 
 使用 curl:
 
 ```
-sudo curl -L https://github.com/blackjack4494/yt-dlc/releases/latest/download/youtube-dlc -o /usr/local/bin/youtube-dlc
-sudo chmod a+rx /usr/local/bin/youtube-dlc
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
 
 **Windows** 用户可以通过下载 [youtube-dlc.exe](https://github.com/blackjack4494/yt-dlc/releases/latest/download/youtube-dlc.exe) 进行安装 (**不要** 安装在 `C:\Windows\System32`!).
@@ -32,7 +32,7 @@ sudo chmod a+rx /usr/local/bin/youtube-dlc
 
 ```cmd
 youtube-dl [OPTIONS] URL [URL...]
-// 示例
+// 示例（使用代理）
 youtube-dl https://www.youtube.com/watch?v=5giYv5n616E --proxy 127.0.0.1:19180
 ```
 
