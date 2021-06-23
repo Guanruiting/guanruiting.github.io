@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="author" content="zchengsite, 1451426471@qq.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+  <title>使用Graphzic与dot语言绘图   | Macshion</title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Macshion</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Links</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">使用Graphzic与dot语言绘图</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2021-06-22
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/Graphviz/" title="Graphviz">
+                    <b>#</b> Graphviz
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/dot/" title="dot">
+                    <b>#</b> dot
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="一、Graphviz简介"><a href="#一、Graphviz简介" class="headerlink" title="一、Graphviz简介"></a>一、Graphviz简介</h2><p>Graphviz是一个可以在Linux、macOS、Windows和Solaris系统上使用的开源图表可视化工具，它能使你具备用文本画图的能力，画出来的图形可导出为图片、SVG、PDF等格式。使用Graphviz之前需要先安装，具体步骤参考官方文档：<a target="_blank" rel="noopener" href="https://graphviz.gitlab.io/download/%E3%80%82%E6%8F%90%E7%A4%BA%EF%BC%9AMac%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%60brew">https://graphviz.gitlab.io/download/。提示：Mac系统使用`brew</a> install graphviz`来安装，Windows系统则下载exe安装包进行安装，并且需要配置系统环境变量：</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622162833910.png" alt="image-20210622162833910"></p>
+<p>安装配置完成后，通过<code>dot -version</code>命令查看是否安装成功，成功会输出版本号等信息：</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622163216158.png" alt="image-20210622163216158"></p>
+<h3 id="二、用命令行生成图片"><a href="#二、用命令行生成图片" class="headerlink" title="二、用命令行生成图片"></a>二、用命令行生成图片</h3><p>现在，你可以在电脑上创建一个demo.dot文本，写入图形代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph simple</span><br><span class="line">&#123;</span><br><span class="line">    a -- b -- c;</span><br><span class="line">    b -- d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在终端/命令行进入该.dot文件所在目录，通过命令把它转换为需要输出的格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot demo.dot –Tpng –o demo.png</span><br></pre></td></tr></table></figure>
+
+<p>恭喜你！成功画了一个图！打开demo.png，你将会看到这个图：</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/demo.svg"></p>
+<p>如果要输出svg格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot demo.dot –Tsvg –o demo.svg</span><br></pre></td></tr></table></figure>
+
+<p>如果你使用VSCode编程，建议安装 Graphviz (dot) language support for Visual Studio Code 和 Graphviz Preview 插件：</p>
+<h3 id="二、使用dot语言画图"><a href="#二、使用dot语言画图" class="headerlink" title="二、使用dot语言画图"></a>二、使用dot语言画图</h3><h4 id="Demo1"><a href="#Demo1" class="headerlink" title="Demo1"></a>Demo1</h4><p>graph方法是使用没有箭头的线连接节点，你还可以更改图形方向、形状及文字格式，用Graphviz画思维导图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">graph g &#123;</span><br><span class="line">    rankdir&#x3D;LR  &#x2F;&#x2F;方向左右</span><br><span class="line">    dot语言-&gt;&#123;简介,语法,示例&#125;</span><br><span class="line">    dot语言[shape&#x3D;box,fontcolor&#x3D;red]</span><br><span class="line">    简介[color&#x3D;red]</span><br><span class="line">    语法[color&#x3D;green]</span><br><span class="line">    示例[color&#x3D;blue]</span><br><span class="line">    简介-&gt;&#123;开源免费,UML绘图,导出svg&#125;</span><br><span class="line">    语法-&gt;&#123;&quot;digraph&quot;,&quot;graph&quot;&#125;</span><br><span class="line">    &quot;digraph&quot;-&gt;导向图[label&#x3D;可以制作带方向的导图]</span><br><span class="line">    &quot;graph&quot;-&gt;无向图[label&#x3D;可以制作不带方向的导图]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622164656933.png" alt="image-20210622164656933"></p>
+<h4 id="Demo2"><a href="#Demo2" class="headerlink" title="Demo2"></a>Demo2</h4><p>使用“digraph”画有箭头的线：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">digraph &#123; a -&gt; b &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165058213.png" alt="image-20210622165058213"></p>
+<h4 id="Demo3"><a href="#Demo3" class="headerlink" title="Demo3"></a>Demo3</h4><p>改变节点的形状和连接线样式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line"></span><br><span class="line">  A [shape&#x3D;diamond]</span><br><span class="line">  B [shape&#x3D;box]</span><br><span class="line">  C [shape&#x3D;circle]</span><br><span class="line"></span><br><span class="line">  A -&gt; B [style&#x3D;dashed, color&#x3D;grey]</span><br><span class="line">  A -&gt; C [color&#x3D;&quot;black:invis:black&quot;]</span><br><span class="line">  A -&gt; D [penwidth&#x3D;5, arrowhead&#x3D;none]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165243138.png" alt="image-20210622165243138"></p>
+<h4 id="Demo4"><a href="#Demo4" class="headerlink" title="Demo4"></a>Demo4</h4><p>可以用来画流程图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">digraph finite_state_machine &#123;</span><br><span class="line">    rankdir&#x3D;LR;</span><br><span class="line">    size&#x3D;&quot;8,5&quot;</span><br><span class="line"></span><br><span class="line">    node [shape &#x3D; doublecircle]; S;</span><br><span class="line">    node [shape &#x3D; point ]; qi</span><br><span class="line"></span><br><span class="line">    node [shape &#x3D; circle];</span><br><span class="line">    qi -&gt; S;</span><br><span class="line">    S  -&gt; q1 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    S  -&gt; S  [ label &#x3D; &quot;a&quot; ];</span><br><span class="line">    q1 -&gt; S  [ label &#x3D; &quot;haha&quot; ];</span><br><span class="line">    q1 -&gt; q2 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    q2 -&gt; q1 [ label &#x3D; &quot;b&quot; ];</span><br><span class="line">    q2 -&gt; q2 [ label &#x3D; &quot;b&quot; ];</span><br><span class="line">    q2 -&gt; q3 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    q3 -&gt; q4 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165724800.png" alt="image-20210622165724800"></p>
+<h4 id="Demo5-1"><a href="#Demo5-1" class="headerlink" title="Demo5-1"></a>Demo5-1</h4><p>一棵简单的二叉树：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line">  A -&gt; &#123;B,C&#125;</span><br><span class="line">  B -&gt; &#123;D,E&#125;</span><br><span class="line">  C -&gt; &#123;F,G&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622170029325.png" alt="image-20210622170029325"></p>
+<h4 id="Demo5-2"><a href="#Demo5-2" class="headerlink" title="Demo5-2"></a>Demo5-2</h4><p>别忘了节点形状是可以改变的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line">node [shape &#x3D; box];</span><br><span class="line">  A -&gt; &#123;B, C, D&#125; -&gt; &#123;F&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171626854.png" alt="image-20210622171626854"></p>
+<p>更多形状：</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622204633195.png" alt="image-20210622204633195"></p>
+<h4 id="Demo6"><a href="#Demo6" class="headerlink" title="Demo6"></a>Demo6</h4><p>用html画表格：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">digraph html&#123;</span><br><span class="line">   mytable[shape &#x3D; none, margin &#x3D; 0, label &#x3D; &lt;</span><br><span class="line">   &lt;TABLE BORDER &#x3D; &quot;0&quot; CELLBORDER &#x3D; &quot;1&quot; CELLSPACING &#x3D; &quot;0&quot; CELLPADDING &#x3D; &quot;4&quot;&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;&lt;FONT COLOR &#x3D; &quot;red&quot;&gt;hello&lt;&#x2F;FONT&gt;&lt;BR&#x2F;&gt;world&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD COLSPAN &#x3D; &quot;3&quot;&gt;b&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;g&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;h&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD&gt;c&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD PORT &#x3D; &quot;here&quot;&gt;d&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD&gt;e&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD COLSPAN &#x3D; &quot;3&quot;&gt;f&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;&#x2F;TABLE&gt;</span><br><span class="line">   &gt;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171048859.png" alt="image-20210622171048859"></p>
+<h4 id="Demo7"><a href="#Demo7" class="headerlink" title="Demo7"></a>Demo7</h4><p>使用rank把节点排列成对齐的行（列）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">digraph G&#123;</span><br><span class="line">   rankdir &#x3D; LR</span><br><span class="line">   &#123;</span><br><span class="line">    node[shape &#x3D; plaintext]</span><br><span class="line">    1995 -&gt; 1996 -&gt; 1997 -&gt; 1998 -&gt; 1999 -&gt; 2000 -&gt; 2001</span><br><span class="line">   &#125;</span><br><span class="line">   &#123;</span><br><span class="line">    node[shape &#x3D; box, style &#x3D; filled]</span><br><span class="line">    WAR3 -&gt; Xhero -&gt; Footman -&gt; DOTA</span><br><span class="line">    WAR3 -&gt; Battleship</span><br><span class="line">   &#125;</span><br><span class="line">   &#123;</span><br><span class="line">    &#123;rank &#x3D; same 1996 WAR3&#125;</span><br><span class="line">    &#123;rank &#x3D; same 1998 Xhero Battleship&#125;</span><br><span class="line">    &#123;rank &#x3D; same 1999 Footman&#125;</span><br><span class="line">    &#123;rank &#x3D; same 2001 DOTA&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171357857.png" alt="image-20210622171357857"></p>
+<h4 id="Demo8"><a href="#Demo8" class="headerlink" title="Demo8"></a>Demo8</h4><p>用控制符”n”,”ne”,”e”,”se”,”s”,”sw”,”w”和”nw”指定连接线的起止位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">digraph G&#123;</span><br><span class="line">   node[shape &#x3D; box]</span><br><span class="line">   c:n -&gt; d[label &#x3D; n]</span><br><span class="line">   c1:ne -&gt; d1[label &#x3D; ne]</span><br><span class="line">   c2:e -&gt; d2[label &#x3D; e]</span><br><span class="line">   c3:se -&gt; d3[label &#x3D; se]</span><br><span class="line">   c4:s -&gt; d4[label &#x3D; s]</span><br><span class="line">   c5:sw -&gt; d5[label &#x3D; sw]</span><br><span class="line">   c6:w -&gt; d6[label &#x3D; w]</span><br><span class="line">   c7:nw -&gt; d7[label &#x3D; nw]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/demo8.png"></p>
+<h4 id="Demo9"><a href="#Demo9" class="headerlink" title="Demo9"></a>Demo9</h4><p>画流程图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">digraph startgame &#123;</span><br><span class="line">    label&#x3D;&quot;游戏资源更新流程&quot;</span><br><span class="line">    rankdir&#x3D;&quot;TB&quot;</span><br><span class="line">    start[label&#x3D;&quot;启动游戏&quot; shape&#x3D;circle style&#x3D;filled]</span><br><span class="line">    ifwifi[label&#x3D;&quot;网络环境判断是否 WIFI&quot; shape&#x3D;diamond]</span><br><span class="line">    needupdate[label&#x3D;&quot;是否有资源需要更新&quot; shape&#x3D;diamond]</span><br><span class="line">    startslientdl[label&#x3D;&quot;静默下载&quot; shape&#x3D;box]</span><br><span class="line">    enterhall[label&#x3D;&quot;进入游戏大厅&quot; shape&#x3D;box]</span><br><span class="line"></span><br><span class="line">    enterroom[label&#x3D;&quot;进入房间&quot; shape&#x3D;box]</span><br><span class="line">    resourceuptodate[label&#x3D;&quot;资源不完整&quot; shape&#x3D;diamond]</span><br><span class="line">    startplay[label&#x3D;&quot;正常游戏&quot; shape&#x3D;circle fillcolor&#x3D;blue]</span><br><span class="line">    warning[label&#x3D;&quot;提醒玩家是否更新&quot; shape&#x3D;diamond]</span><br><span class="line">    startdl[label&#x3D;&quot;进入下载界面&quot; shape&#x3D;box]</span><br><span class="line">    &#x2F;&#x2F;&#123;rank&#x3D;same; needupdate, enterhall&#125;</span><br><span class="line"></span><br><span class="line">    &#123;shape&#x3D;diamond; ifwifi, needupdate&#125;</span><br><span class="line"></span><br><span class="line">    start -&gt; ifwifi</span><br><span class="line">    ifwifi-&gt;needupdate[label&#x3D;&quot;是&quot;]</span><br><span class="line">    ifwifi-&gt;enterhall[label&#x3D;&quot;否&quot;]</span><br><span class="line">    needupdate-&gt;startslientdl[label&#x3D;&quot;是&quot;]</span><br><span class="line">    startslientdl-&gt;enterhall</span><br><span class="line">    needupdate-&gt;enterhall[label&#x3D;&quot;否&quot;]</span><br><span class="line"></span><br><span class="line">    enterhall -&gt; enterroom</span><br><span class="line">    enterroom -&gt; resourceuptodate</span><br><span class="line">    resourceuptodate -&gt; warning[label&#x3D;&quot;是&quot;]</span><br><span class="line">    resourceuptodate -&gt; startplay[label&#x3D;&quot;否&quot;]</span><br><span class="line">    warning -&gt; startdl[label&#x3D;&quot;确认下载&quot;]</span><br><span class="line">    warning -&gt; enterhall[label&#x3D;&quot;取消下载&quot;]</span><br><span class="line">    startdl -&gt; enterhall[label&#x3D;&quot;取消下载&quot;]</span><br><span class="line">    startdl -&gt; startplay[label&#x3D;&quot;下载完成&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622175352386.png" alt="image-20210622175352386"></p>
+<p>如果要近一步学会使用Graphviz画图，你一定要浏览这个repo：<a target="_blank" rel="noopener" href="https://github.com/huangz1990/redisbook1e-gallery">https://github.com/huangz1990/redisbook1e-gallery</a></p>
+<p>参考资料：</p>
+<ul>
+<li>Graphviz官网： <a target="_blank" rel="noopener" href="http://www.graphviz.org/">http://www.graphviz.org/</a></li>
+<li>Graphviz官方dot指南文档《Drawing graphs with dot》：<a target="_blank" rel="noopener" href="http://www.graphviz.org/pdf/dotguide.pdf">http://www.graphviz.org/pdf/dotguide.pdf</a></li>
+<li>Graphviz Tutorial 1.0 文档：<a target="_blank" rel="noopener" href="https://graphviztutorial.readthedocs.io/zh_CN/latest/chap01.html">https://graphviztutorial.readthedocs.io/zh_CN/latest/chap01.html</a></li>
+<li>DOT语言学习笔记：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/51578351">https://zhuanlan.zhihu.com/p/51578351</a></li>
+<li>Dot语言教程：<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000004646829">https://segmentfault.com/a/1190000004646829</a></li>
+<li>《Redis 设计与实现》图片集：<a target="_blank" rel="noopener" href="http://1e-gallery.redisbook.com/index.html">http://1e-gallery.redisbook.com/index.html</a></li>
+<li>windows下Graphviz安装及入门教程: <a target="_blank" rel="noopener" href="https://blog.csdn.net/lanchunhui/article/details/49472949">https://blog.csdn.net/lanchunhui/article/details/49472949</a></li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/JavaScriptFetchAPI/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2021-06-22
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Graphviz/" title="Graphviz">
+                        <b>#</b> Graphviz
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/dot/" title="dot">
+                        <b>#</b> dot
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div class="post-catalog" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Graphviz%E7%AE%80%E4%BB%8B"><span class="toc-text">一、Graphviz简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%94%9F%E6%88%90%E5%9B%BE%E7%89%87"><span class="toc-text">二、用命令行生成图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8dot%E8%AF%AD%E8%A8%80%E7%94%BB%E5%9B%BE"><span class="toc-text">二、使用dot语言画图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo1"><span class="toc-text">Demo1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo2"><span class="toc-text">Demo2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo3"><span class="toc-text">Demo3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo4"><span class="toc-text">Demo4</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo5-1"><span class="toc-text">Demo5-1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo5-2"><span class="toc-text">Demo5-2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo6"><span class="toc-text">Demo6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo7"><span class="toc-text">Demo7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo8"><span class="toc-text">Demo8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Demo9"><span class="toc-text">Demo9</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/macshion">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="twitter" target="_blank" rel="noopener" href="https://twitter.com/_Macshion">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" target="_blank" rel="noopener" href="https://weibo.com/1909056972">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a href="https://macshion.github.io/">Copyright © Macshion 2019+</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>

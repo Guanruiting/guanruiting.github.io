@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="author" content="zchengsite, 1451426471@qq.com" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  
+  <title>How to Make React SEO-Friendly: an Extensive SEO Guide   | Macshion</title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Macshion</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Links</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">How to Make React SEO-Friendly: an Extensive SEO Guide</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2020-12-29
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/React/" title="React">
+                    <b>#</b> React
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/SEO/" title="SEO">
+                    <b>#</b> SEO
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/Nextjs/" title="Nextjs">
+                    <b>#</b> Nextjs
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/Gatsby/" title="Gatsby">
+                    <b>#</b> Gatsby
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>React-driven single-page applications (SPAs) are gaining momentum. Used by tech giants like Facebook, Twitter, and Google, React allows for building fast, responsive, and animation-rich websites and web applications with a smooth user experience.</p>
+<p>However, products created with React (or any other modern JavaScript framework like Angular, Vue, or Svelte) have limited capabilities for search engine optimization. This becomes a problem if a website mostly acquires customers through website content and<a target="_blank" rel="noopener" href="https://blog.hubspot.com/service/customer-acquisition"> search marketing</a>. </p>
+<p>Luckily, there are a couple of ready-made solutions for React that can help you achieve visibility in search engines. We talk about them below. </p>
+<p>But before we dive deep into technical details of optimizing single-page applications (SPA), let’s deal with some useful theory to help you understand the challenges with SEO in React websites.</p>
+<h2 id="What’s-a-single-page-app-and-why-React"><a href="#What’s-a-single-page-app-and-why-React" class="headerlink" title="What’s a single-page app and why React?"></a>What’s a single-page app and why React?</h2><p>A single-page application is a web application whose content is served in a single HTML page. This page is dynamically updated, but it doesn’t fully reload each time a user interacts with it. Instead of sending a new request to the server for each interaction and then receiving a whole new page with new content, the client side of a single-page web app only requests and loads data that needs to be updated. </p>
+<p>Facebook, Twitter, Netflix, Trello, Gmail, and Slack are all examples of single-page apps.</p>
+<p>From the developer’s perspective, SPAs keep the presentation layer (the front end) and the data layer (the back end) separate, so two teams can develop these parts in parallel. Also, with an SPA, it’s easier to scale and use a microservices architecture than it is with a multi-page app. </p>
+<p><strong>Read also: <a target="_blank" rel="noopener" href="https://yalantis.com/blog/single-page-apps-vs-multiple-page-apps/">Single-page Apps vs Multi-page Web Apps: What to Choose for Web Development</a></strong></p>
+<p>From the user’s perspective, single-page apps offer seamless interaction with a web app. Plus, these apps can cache data in local storage, meaning they’ll load even faster the second time. </p>
+<p>When it comes to building an SPA, developers can use one of the popular JavaScript frameworks: React, Angular, or Vue. Among these big three, React holds the top spot. <a target="_blank" rel="noopener" href="https://reactjs.org/">React </a>is the most popular JavaScript framework according to the 2019 <a target="_blank" rel="noopener" href="https://2019.stateofjs.com/">State of JavaScript</a> Survey.</p>
+<p>Thanks to React’s<a target="_blank" rel="noopener" href="https://reactjs.org/docs/components-and-props.html"> component-based</a> architecture, it’s easy to reuse code and divide a large app into smaller parts. Hence, maintaining and debugging large SPA projects is much easier than doing the same for large multi-page apps. The <a target="_blank" rel="noopener" href="https://reactjs.org/docs/faq-internals.html">virtual DOM</a> ensures high app performance. Also, the React library supports all modern browsers, including their older versions. </p>
+<p><strong>Read also: <a target="_blank" rel="noopener" href="https://yalantis.com/blog/javascript-frameworks-how-to-make-your-choice/">7 Best JavaScript Frameworks and Libraries for Frontend Web Development </a></strong></p>
+<p>But as you might have guessed, React has disadvantages as well, and one of the biggest is the lack of SEO-friendliness. </p>
+<h2 id="Principles-of-search-engine-optimization"><a href="#Principles-of-search-engine-optimization" class="headerlink" title="Principles of search engine optimization"></a>Principles of search engine optimization</h2><p>Search engine optimization (SEO) is the practice of increasing the quality and quantity of web traffic to a website by increasing its visibility on search engines. </p>
+<p>The main task of SEO is to help a web app rank in search engines (Google, Bing) when the target audience searches for information by a certain keyword. Most SEO efforts focus on optimizing apps for Google. After all, as of 2020 Google has a 92.16% search engine market share according to <a target="_blank" rel="noopener" href="https://gs.statcounter.com/search-engine-market-share#monthly-202001-202004-bar">StatCounter</a>. </p>
+<p>According to <a target="_blank" rel="noopener" href="https://backlinko.com/google-ctr-stats">Backlinko</a>, 75% of all user clicks go to the top three websites in search engine results, while websites from the second results page and beyond get only 0.78% of clicks. That’s why digital businesses are furiously fighting to get on this first page of search results.</p>
+<p>For business owners, it’s crucial to think of an SEO optimization strategy from the very beginning of web app development to find an effective technology stack. </p>
+<p>To determine a website’s ranking in search results, search engines use <a target="_blank" rel="noopener" href="https://www.google.com/search/howsearchworks/crawling-indexing/">web crawlers</a>. A web crawler is a bot that regularly visits web pages and analyzes them according to specific criteria set by the search engine. Each search engine has its own crawler, and Google’s crawler is called the Googlebot. </p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/how-crawlers-work.png" alt="This is how crawlers work"></p>
+<p>The Googlebot explores pages link by link, gathers information on website freshness, content uniqueness, number of backlinks, etc., downloads HTML and CSS files, and sends all of this data to Google servers. Then it’s analyzed and indexed by a system called Caffeine. This is a fully automatic process, so it’s vital to ensure that crawlers correctly understand the website content. And here’s where the problem appears. </p>
+<h2 id="What’s-wrong-with-optimizing-single-page-applications-SPA-for-search-engines"><a href="#What’s-wrong-with-optimizing-single-page-applications-SPA-for-search-engines" class="headerlink" title="What’s wrong with optimizing single-page applications (SPA) for search engines?"></a>What’s wrong with optimizing single-page applications (SPA) for search engines?</h2><p>Typically, single-page apps load pages on the client side: at first, the page is an empty container; then JavaScript pushes content to this container. The simplest HTML document for a React app might look as follows:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;React App&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;noscript&gt;You need to enable JavaScript to run <span class="built_in">this</span> app.&lt;/noscript&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;root&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;/static/js/bundle.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>As you can see, there’s nothing except the <div> tag and an external script. Single-page applications need a browser to run a script, and only after the script is run will the content be dynamically loaded to the web page. So when a crawler visits the website, it sees an empty page without content. Hence, the page cannot be indexed. </p>
+<p>In autumn 2015, <a target="_blank" rel="noopener" href="https://webmasters.googleblog.com/2015/10/deprecating-our-ajax-crawling-scheme.html">Google announced</a> that their bots would also inspect the JavaScript and CSS of web pages, so they would be able to render and understand web pages like browsers do. That was great news, but there are still problems with SEO optimization:  </p>
+<ul>
+<li><strong>Long delays</strong></li>
+</ul>
+<p>If the content on a page updates frequently, crawlers should regularly revisit the page. This can cause problems, since reindexing may only be done a week later after the content is updated, as Google Chrome developer Paul Kinlan <a target="_blank" rel="noopener" href="https://mobile.twitter.com/Paul_Kinlan/status/1039852756113080320">reports on Twitter</a>.</p>
+<p>This happens because the Google Web Rendering Service (WRS) enters the game. After a bot has downloaded HTML, CSS, and JavaScript files, the WRS runs the JavaScript code, fetches data from APIs, and only after that sends the data to Google’s servers.</p>
+<ul>
+<li><strong>Limited crawling budget</strong></li>
+</ul>
+<p>The crawl budget is the maximum number of pages on your website that a crawler can process in a certain period of time. Once that time is up, the bot leaves the site no matter how many pages it’s downloaded (whether that’s 26, 3, or 0). If each page takes too long to load because of running scripts, the bot will simply leave your website before indexing it.</p>
+<p>Talking about other search engines, Yahoo’s and Bing’s crawlers will still see an empty page instead of dynamically loaded content. So getting your React-based SPA to rank at the top on these search engines is a will-o’-the-wisp.</p>
+<p>You should think of how to solve this problem on the stage of designing app architecture.</p>
+<h2 id="Solving-the-problem"><a href="#Solving-the-problem" class="headerlink" title="Solving the problem"></a>Solving the problem</h2><p>There are a couple of ways to make a React app SEO-friendly: by creating an <strong>isomorphic React</strong> app or by using <strong>prerendering</strong>. </p>
+<h3 id="Isomorphic-React-apps"><a href="#Isomorphic-React-apps" class="headerlink" title="Isomorphic React apps"></a>Isomorphic React apps</h3><p>In plain English, an isomorphic JavaScript application (or in our case, an isomorphic React application) can run on both the client side and the server side. </p>
+<p>Thanks to isomorphic JavaScript, you can run the React app and capture the rendered HTML file that’s normally rendered by the browser. This HTML file can then be served to everyone who requests the site (including Googlebot).</p>
+<p>On the client side, the app can use this HTML as a base and continue operating on it in the browser as if it had been rendered by the browser. When needed, additional data is added using JavaScript, as an isomorphic app is still dynamic. </p>
+<p>An isomorphic app defines whether the client is able to run scripts or not. When JavaScript is turned off, the code is rendered on the server, so a browser or bot gets all meta tags and content in HTML and CSS. </p>
+<p>When JavaScript is on, only the first page is rendered on the server, so the browser gets HTML, CSS, and JavaScript files. Then JavaScript starts running and the rest of the content is loaded dynamically. Thanks to this, the first screen is displayed faster, the app is compatible with older browsers, and user interactions are smoother in contrast to when websites are rendered on the client side. </p>
+<p>Building an isomorphic app can be really <a target="_blank" rel="noopener" href="https://reactjsnews.com/isomorphic-react-in-real-life">time-consuming</a>. Luckily, there are frameworks that facilitate this process. The two most popular solutions for SEO are Next.js and Gatsby.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://nextjs.org/">Next.js</a> is a framework that helps you create React apps that are generated on the server side quickly and without hassle. It also allows for automatic code splitting and hot code reloading. Next.js can do full-fledged server-side rendering, meaning HTML is generated for each request right when the request is made. </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">Gatsby</a> is a free open-source compiler that allows developers to make fast and powerful websites. Gatsby doesn’t offer full-fledged server-side rendering. Instead, it generates a static website beforehand and stores generated HTML files in the cloud or on the hosting service. Let’s take a closer look at their approaches. </p>
+</li>
+</ul>
+<p><strong>Gatsby vs Next.js</strong></p>
+<p>The challenge of SEO for GatsbyJS framework is solved by generating <strong>static websites</strong>. All HTML pages are generated in advance, during the development or build phase, and are then simply loaded to the browser. They contain static data that can be hosted on any hosting service or in the cloud. Such websites are very fast, since they aren’t generated at runtime and don’t wait for data from the database or API. </p>
+<p>But data is only fetched during the build phase. So if your web app has any new content, it won’t be shown until another build is run.</p>
+<p>This approach works for apps that don’t update data too frequently, i.e. blogs. But if you want to build a web app that loads hundreds of comments and posts (like forums or social networks), it’s better to opt for another technique. </p>
+<p>The second approach is <strong>server-side rendering (SSR)</strong>, which is offered by Next.js. In contrast with traditional client-side rendering, in server-side rendering, HTML is generated on the server, and then the server sends already generated HTML and CSS files to the browser. Also, with Next.js, HTML is generated each time a client sends a request to the server. This is vital when a web app contains dynamic data (as forums or social networks do). For SSR to work on React, developers also need to use the Node.js server, which can process all requests at runtime. </p>
+<p><strong>Server-side rendering with Next.js</strong></p>
+<p>The Next.js rendering algorithm looks as follows:</p>
+<ol>
+<li><p>The Next.js server, running on Node.js, receives a request and matches it with a certain page (a React component) using a URL address.</p>
+</li>
+<li><p>The page can request data from an API or database, and the server will wait for this data. </p>
+</li>
+<li><p>The Next.js app generates HTML and CSS based on the received data and existing React components.</p>
+</li>
+<li><p>The server sends a response with HTML, CSS, and JavaScript.</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/next-ks.png" alt="How Next.js works"></p>
+</li>
+</ol>
+<p><strong>Making website SEO Friendly with GatsbyJS</strong></p>
+<p>The process of optimizing React applications is divided into two phases: generating a static website during the build and processing requests during runtime.</p>
+<p>The <a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/glossary/#build">build time process</a> looks as follows:</p>
+<ol>
+<li><p>Gatsby’s bundling tool receives data from an API, CMS, and file system.</p>
+</li>
+<li><p>During deployment or setting up a CI/CD pipeline, the tool generates static HTML and CSS on the basis of data and React components.</p>
+</li>
+<li><p>After compilation, the tool creates an about folder with an index.html file. The website consists of only static files, which can be hosted on any hosting service or in the cloud.</p>
+</li>
+</ol>
+<p>Request processing during runtime happens like this:</p>
+<ol>
+<li><p>Gatsby instantly sends HTML, CSS, and JavaScript files to the requested page, since they already were rendered during compilation.</p>
+</li>
+<li><p>After JavaScript is loaded to the browser, the website starts working like a typical React app. You can dynamically request data that isn’t important for SEO and work with the website just like you work with a regular single-page React app.</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/gatsby.png" alt="How Gatsby works"></p>
+</li>
+</ol>
+<p>Creating an isomorphic app is considered the most reliable way to make React SEO-compatible, but it’s not the only option. </p>
+<h3 id="Prerendering"><a href="#Prerendering" class="headerlink" title="Prerendering"></a>Prerendering</h3><p>The idea of prerendering is to preload all HTML elements on the page and cache all SPA pages on the server with the help of <a target="_blank" rel="noopener" href="https://developers.google.com/web/updates/2017/04/headless-chrome">Headless Chrome</a>. One popular way to do this is using a prerendering service like <a target="_blank" rel="noopener" href="https://prerender.io/">prerender.io</a>. A prerendering service intercepts all requests to your website and, with the help of a user-agent, defines whether a bot or a user is viewing the website.</p>
+<p>If the viewer is a bot, it gets the cached HTML version of the page. If it’s a user, the single-page app loads normally. </p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/prerendering.png" alt="This is how prerendering works"></p>
+<p>Prerendering has a lighter server payload compared to server-side rendering. But on the other hand, most prerendering services are paid and work poorly with dynamically changing content.</p>
+<h2 id="Using-Gatsby-A-demo-project"><a href="#Using-Gatsby-A-demo-project" class="headerlink" title="Using Gatsby: A demo project"></a>Using Gatsby: A demo project</h2><p>To demonstrate how isomorphic React apps work, we’ve created a simple <a target="_blank" rel="noopener" href="http://yalantis-on-gatsby.surge.sh/">app for the Yalantis blog</a> using Gatsby. We’ve uploaded the source code of the app to <a target="_blank" rel="noopener" href="https://github.com/ModPhoenix/yalantis-gatsby">this repository</a> on GitHub.</p>
+<p>Gatsby renders only the starting page. Then the website works as a single-page app. To see how this isomorphic app works, just turn off JavaScript in your browser’s devtools. If you use Chrome, here are <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13405383/how-to-disable-javascript-in-chrome-developer-tools">instructions</a> on how to do that. If you refresh the page, the website should work just like it works with JavaScript turned on.</p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/web-app-with-and-without-js.png" alt="Our app with enabled and disabled JavaScript"></p>
+<p>Now let’s check the audit result using <a target="_blank" rel="noopener" href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>. Its performance is close to 100, while SEO for Gatsby.js applications is measured as high as 90. </p>
+<p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/images/lighthouse.png" alt="Lighthouse results"></p>
+<p>If this website were on the production server, all indicators would be approximately 100. </p>
+<h2 id="The-bottom-line"><a href="#The-bottom-line" class="headerlink" title="The bottom line"></a>The bottom line</h2><p>Single-page React applications offer exceptional performance, seamless interactions close to those of native applications, a lighter server payload, and ease of web development. </p>
+<p>Challenges with SEO shouldn’t be a reason for you to avoid using the React library. Instead, you can use the above-mentioned solutions to fight this issue. Moreover, search engine crawlers are getting smarter every year, so in the future, SEO optimization may no longer be a pitfall of using React.</p>
+<p><a target="_blank" rel="noopener" href="https://yalantis.com/blog/search-engine-optimization-for-react-apps/">https://yalantis.com/blog/search-engine-optimization-for-react-apps/</a></p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/NLP-difficult/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2020-12-29
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/React/" title="React">
+                        <b>#</b> React
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/SEO/" title="SEO">
+                        <b>#</b> SEO
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Nextjs/" title="Nextjs">
+                        <b>#</b> Nextjs
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Gatsby/" title="Gatsby">
+                        <b>#</b> Gatsby
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/LearnhowGatsbyworks/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div class="post-catalog" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What%E2%80%99s-a-single-page-app-and-why-React"><span class="toc-text">What’s a single-page app and why React?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Principles-of-search-engine-optimization"><span class="toc-text">Principles of search engine optimization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What%E2%80%99s-wrong-with-optimizing-single-page-applications-SPA-for-search-engines"><span class="toc-text">What’s wrong with optimizing single-page applications (SPA) for search engines?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solving-the-problem"><span class="toc-text">Solving the problem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Isomorphic-React-apps"><span class="toc-text">Isomorphic React apps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerendering"><span class="toc-text">Prerendering</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-Gatsby-A-demo-project"><span class="toc-text">Using Gatsby: A demo project</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-bottom-line"><span class="toc-text">The bottom line</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/macshion">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="twitter" target="_blank" rel="noopener" href="https://twitter.com/_Macshion">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="weibo" target="_blank" rel="noopener" href="https://weibo.com/1909056972">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a href="https://macshion.github.io/">Copyright © Macshion 2019+</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>
