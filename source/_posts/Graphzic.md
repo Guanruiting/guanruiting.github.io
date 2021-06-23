@@ -283,14 +283,10 @@ digraph startgame {
 参考资料：
 
 - Graphviz官网： http://www.graphviz.org/
-
 - Graphviz官方dot指南文档《Drawing graphs with dot》：http://www.graphviz.org/pdf/dotguide.pdf
-
 - Graphviz Tutorial 1.0 文档：https://graphviztutorial.readthedocs.io/zh_CN/latest/chap01.html
-
 - DOT语言学习笔记：https://zhuanlan.zhihu.com/p/51578351
-
 - Dot语言教程：[https://segmentfault.com/a/1190000004646829](https://segmentfault.com/a/1190000004646829)
-
 - 《Redis 设计与实现》图片集：http://1e-gallery.redisbook.com/index.html
+- windows下Graphviz安装及入门教程: https://blog.csdn.net/lanchunhui/article/details/49472949
 
