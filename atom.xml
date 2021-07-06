@@ -6,7 +6,7 @@
   <link href="https://macshion.github.io/atom.xml" rel="self"/>
   
   <link href="https://macshion.github.io/"/>
-  <updated>2021-06-22T13:17:29.296Z</updated>
+  <updated>2021-07-06T10:49:40.979Z</updated>
   <id>https://macshion.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Frontend Study Roadmap</title>
+    <link href="https://macshion.github.io/Frontend-study-roadmap/"/>
+    <id>https://macshion.github.io/Frontend-study-roadmap/</id>
+    <published>2021-07-06T07:16:47.000Z</published>
+    <updated>2021-07-06T10:49:40.979Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-From-https-roadmap-sh&quot;&gt;&lt;a href=&quot;#1-From-https-roadmap-sh&quot; class=&quot;headerlink&quot; title=&quot;#1 From https://roadmap.sh/&quot;&gt;&lt;/a&gt;#1 From &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="roadmap" scheme="https://macshion.github.io/tags/roadmap/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Graphzic与dot语言绘图</title>
@@ -411,24 +434,6 @@
     <category term="Javascript" scheme="https://macshion.github.io/tags/Javascript/"/>
     
     <category term="jQuery" scheme="https://macshion.github.io/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS块元素垂直居中的5种方法</title>
-    <link href="https://macshion.github.io/css-vertical-centering/"/>
-    <id>https://macshion.github.io/css-vertical-centering/</id>
-    <published>2019-05-12T01:41:47.000Z</published>
-    <updated>2020-12-29T11:05:11.756Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;CSS垂直居中是工作中经常遇到的问题，也是前端面试常问问题。&lt;/p&gt;
-&lt;p&gt;总体来说，CSS块元素垂直居中分为两种情况：子元素宽高固定或不固定。&lt;br&gt;子元素宽高固定比较简单，结合padding或margin设置居中即可。子元素宽高不固定也有办法，总结起来大概有设置绝对定位、设置显示方式为flex或table-cell。&lt;br&gt;&lt;a href=&quot;https://guanruiting.github.io/demo/css-vurtical-centering.html&quot;&gt;垂直居中DEMO&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="CSS" scheme="https://macshion.github.io/tags/CSS/"/>
     
   </entry>
   
