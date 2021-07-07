@@ -3,7 +3,7 @@ title: 使用Graphzic与dot语言绘图
 date: 2021-06-22 12:23:53
 tags:
 - Graphviz
-- dot
+- Dot
 ---
 ## 一、Graphviz简介
 

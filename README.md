@@ -8,6 +8,18 @@
 ```
 hexo new "My New Post"
 ```
+### 添加一篇草稿
+```
+hexo new draft 'A New Draft'
+```
+### 发布一篇草稿
+```
+hexo publish [layout] <title>
+// 比如
+hexo publish post 'How to Learn English'
+```
+### 置顶文章
+Add `top: true` to the top of the post you want
 
 ### 启动本地服务
 ```
@@ -39,4 +51,3 @@ npm install hexo-deployer-git
 
 // 记得，不需要hexo init这条指令
 ```
-

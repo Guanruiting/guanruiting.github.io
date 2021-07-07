@@ -76,18 +76,19 @@ navbar:
     enable: true
     path: /
     key: home
+
   -
     name: Archives
     enable: true
     path: /archives/
     key: archives
   -
-    name: Categories
+    name: 222
     enable: false
     path: /categories/
     key: categories
   -
-    name: Tags
+    name: Categories
     enable: true
     path: /tags/
     key: tags
@@ -98,7 +99,7 @@ navbar:
     key: friends
   -
     name: About
-    enable: true
+    enable: false
     path: /about/
     key: about
 
@@ -174,4 +175,20 @@ footer:
 # 文章搜索
 search:
   enable: true
-  placeholder: 
+  path: search.xml
+  field: post
+  content: true
+  placeholder: Search...
+
+# 图片懒加载
+lazyload:
+  enable: true
+  onlypost: true # optional
+  loadingImg: /images/loading.gif
+  isSPA: false # optional
+
+# 置顶
+index_generator:
+    path: ''
+    per_page: 10
+    order_by: -date
