@@ -7,7 +7,8 @@ html, body {
   font-size: 10px;
   letter-spacing: 0.01rem;
   font-family: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Neue,Noto Sans, Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,'PingFang SC', 'Hiragino Sans GB', '\5B8B\4F53','Microsoft Yahei'";
-  background-color: #f9f9f9;  
+  background: #f9f9f9 url(../images/sky.jpg) left top repeat;  
+  background-size:contain;
 }
 
 body.hidden {
@@ -40,15 +41,15 @@ body.hidden {
 }
 
 a {
-  color: #666;
+  color: #05040a;
   text-decoration: none;
   background-color: transparent;
   transition: color 0.3s;
 }
 
-a:hover {
+/* a:hover {
   color: black;
-}
+} */
 
 .flex-container {
   min-height: calc(100vh - 290px);
@@ -61,14 +62,25 @@ a:hover {
 
 .header {
   margin-bottom: 5px;
-  padding-bottom:25px;
+  padding-bottom:15px;
   padding-top:30px;
-  background-color: #f7f7f7;
+  min-height:auto!important;
+}
+
+.header-container {
+  width: 50%;
+  margin: 0 auto;
+  padding:5px 0;
+  background-color: rgba(221,228,238,0.1);
+  border-radius: 6px;
 }
 
 .container {
   width: 50%;
   margin: 0 auto;
+  padding:30px 0;
+  background-color: #eef1f5;
+  border-radius: 6px;
 }
 
 .index .post-list,
@@ -84,7 +96,7 @@ a:hover {
 }
 
 @media (max-width: 888px) {
-  .container {
+  .container,.header-container {
     width: 100%;
   }
   .index .post-list,
@@ -92,7 +104,7 @@ a:hover {
   .archives .post-list,
   .tag-index .tag-list,
   .about-index .markdown-body {
-    padding: 0;
+    padding: 2vw;
   }
   .category-index .category-list {
     padding: 0 40px;
@@ -127,7 +139,7 @@ a:hover {
 .post-item .time-m-d {
   flex-shrink: 0;
   margin-right: 30px;
-  color: #fd958e;
+  color: #4a688c;
   font-size: 1.5rem;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
@@ -155,7 +167,8 @@ a:hover {
 .avatar {
   text-align: center;
   padding-bottom: 30px;
-  margin-left: calc(100vw - 100%);
+  padding-top: 20px;
+  /* margin-left: calc(100vw - 100%); */
 }
 
 .avatar img {
@@ -171,7 +184,7 @@ a:hover {
 }
 
 .nickname a,.nickname{
-    color: #fd958e;
+    color: #fff;
 }
 
 .content {
@@ -181,20 +194,21 @@ a:hover {
 
 .content-title {
   font-size: 1.6rem;
-  color: #666;
+  color: #05040a;
   margin-bottom: 20px;
+  margin-left: 30px;
   /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .navbar {
-  margin-left: calc(100vw - 100%);
+  /* margin-left: calc(100vw - 100%); */
   display: flex;
   align-items: center;
   justify-content: center;
   padding:1rem 0;
   /* background-color:#f6e5e4; */
-  border-top:1px dashed #ee6e73;
-  border-bottom:1px dashed #ee6e73;
+  /* border-top:1px dashed #000000;
+  border-bottom:1px dashed #000000; */
 }
 
 .navbar ul li {
@@ -217,13 +231,17 @@ a:hover {
   left: 0;
   height: 8px;
   opacity: 0.3;
-  background-color: gray;
+  background-color: #d5dfe8;
   width: 100%;
   border-radius: 3px;
 }
 
+.navbar ul li a {
+  color: #eef1f5;
+}
+
 .navbar ul li.active a {
-  color: black;
+  color: #eef1f5;
 }
 
 .navbar ul li.active a::after {
@@ -233,7 +251,7 @@ a:hover {
   left: 0;
   height: 8px;
   opacity: 0.5;
-  background-color: gray;
+  background-color: #d5dfe8;
   width: 100%;
   border-radius: 3px;
 }
@@ -254,7 +272,7 @@ a:hover {
   font-size: 1.5rem;
   padding: 20px 90px;
   text-align: right;
-  color: #666;
+  color: #05040a;
 }
 
 .post-navigation i {
@@ -326,7 +344,7 @@ a:hover {
   left: -2px;
   right: -2px;
   transition: transform 0.1s linear;
-  background: gray;
+  background: #d5dfe8;
   opacity: 0.8;
   transform: scaleX(0);
   transform-origin: right;
@@ -362,13 +380,14 @@ a:hover {
 
 .friend-list-item .nickname {
   padding-right: 10px;
+  color:#333;
 }
 
 .post-details .post-title {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 600;
-  color: #ee6e73;
+  color: #000000;
   padding-bottom: 10px;
 }
 
@@ -376,7 +395,7 @@ a:hover {
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 50px;
-  color: #dfdc05;
+  color: #153a55;
 }
 
 .post-content {
@@ -422,11 +441,11 @@ a:hover {
   width: calc(20% - 50px);
   font-size: 1.4rem;
   padding-left: 10px;
-  border-top: 1px dashed #fd958e;
+  border-top: 1px dashed #4a688c;
 }
 
 .post-catalog .title {
-  color: #666;
+  color: #d5dfe8;
   font-size: 1.65rem;
   font-weight: bold;
   padding: 5px 0;
@@ -453,10 +472,11 @@ a:hover {
   padding: 3px 5px;
   opacity: 0.8;
   border-left: 2px solid transparent;
+  color:#d5dfe8
 }
 
 .toc-link.active {
-  color: black;
+  color: #fff;
   opacity: 1;
 }
 
@@ -467,7 +487,7 @@ a:hover {
   bottom: 0;
   width: 8px;
   height: 90%;
-  background-color: gray;
+  background-color: #e6eef1;
   opacity: 0.3;
   border-radius: 3px;
 }
@@ -479,7 +499,7 @@ a:hover {
   bottom: 0;
   width: 8px;
   height: 90%;
-  background-color: gray;
+  background-color: #e6eef1;
   opacity: 0.5;
   border-radius: 3px;
 }
@@ -502,6 +522,9 @@ a:hover {
   font-weight: bold;
 }
 
+.back-to-top a,.search-icon a{
+      color:#fff;
+  }
 .search-overlay {
   position: fixed;
   top: 0;
@@ -593,7 +616,7 @@ a:hover {
 .search-result-abstract {
   padding: 10px 10px 0 10px;
   font-size: 1.2rem;
-  color: #666;
+  color: #05040a;
 }
 
 .search-keyword {

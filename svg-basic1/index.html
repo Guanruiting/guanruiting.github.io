@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -175,7 +173,6 @@
 </tbody></table>
 <h3 id="viewBox"><a href="#viewBox" class="headerlink" title="viewBox"></a>viewBox</h3><p>视区盒子，SVG就像是我们的显示器屏幕，viewBox 就是截屏工具选中的那个框框， 最终的呈现就是把框框中的截屏内容再次在显示器中全屏显示！</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">viewBox=<span class="string">&quot;x,y,width,height&quot;</span></span><br><span class="line"><span class="comment">// x: 左上角横坐标, y: 左上角纵坐标, width: 宽度, height: 高度</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="preserveAspectRatio"><a href="#preserveAspectRatio" class="headerlink" title="preserveAspectRatio"></a>preserveAspectRatio</h3><p>使用 preserveAspectRatio 属性来让 viewBox 保持宽高比。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">preserveAspectRatio&#x3D;[defer]&lt;align&gt;&lt;meetOrSlice&gt;</span><br></pre></td></tr></table></figure>
 <p>defer 参数是可选值，它仅仅在 image 元素上应用 preserveAspectRatio 属性时才使用。在使用其他元素时会被忽略。<br>align 参数控制 viewBox 是否强制进行均匀的缩放。</p>

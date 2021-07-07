@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -133,11 +131,9 @@
 <h5 id="语法一：浅拷贝"><a href="#语法一：浅拷贝" class="headerlink" title="语法一：浅拷贝"></a>语法一：浅拷贝</h5><p><code>$.extend( target [, object1 ] [, objectN ] )</code></p>
 <p><em>例：</em></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = $.extend(&#123;<span class="attr">name</span>:<span class="string">&quot;Tim&quot;</span>&#125;,&#123;<span class="attr">age</span>:<span class="number">11</span>,<span class="attr">sex</span>:<span class="string">&quot;boy&quot;</span>&#125;)</span><br><span class="line">cosole.log(obj) <span class="comment">//输出 &#123;name: &quot;Tim&quot;, age: 11, sex: &quot;boy&quot;&#125;</span></span><br></pre></td></tr></table></figure>
-
 <h5 id="语法二：指示是否深度合并"><a href="#语法二：指示是否深度合并" class="headerlink" title="语法二：指示是否深度合并"></a>语法二：指示是否深度合并</h5><p><code>$.extend( [deep ], target, object1 [, objectN ] )</code></p>
 <p><em>例：</em></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ret = &#123;<span class="attr">name</span>:<span class="string">&quot;mm&quot;</span>,<span class="attr">list</span>:&#123;<span class="attr">age</span>:<span class="number">12</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> res = &#123;<span class="attr">name</span>:<span class="string">&quot;mm&quot;</span>,<span class="attr">list</span>:&#123;<span class="attr">sex</span>:<span class="string">&quot;boy&quot;</span>,<span class="attr">height</span>:<span class="string">&quot;140CM&quot;</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = $.extend(<span class="literal">true</span>,&#123;&#125;,ret,res)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj) <span class="comment">//&#123; name: &quot;mm&quot;, list: &#123; age: 12 height: &quot;140CM&quot; sex: &quot;boy&quot; &#125; &#125;</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="如果只传递一个参数"><a href="#如果只传递一个参数" class="headerlink" title="如果只传递一个参数"></a>如果只传递一个参数</h4><blockquote>
 <p>如果只为<code>$.extend()</code>指定了一个参数，则意味着参数target被省略。此时，target就是jQuery对象本身。通过这种方式，我们可以为全局对象jQuery添加新的函数。</p>
 </blockquote>

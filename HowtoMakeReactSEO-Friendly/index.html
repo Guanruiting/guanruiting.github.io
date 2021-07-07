@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -118,14 +116,14 @@
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/SEO/" title="SEO">
-                    <b>#</b> SEO
+                  <a href="/tags/Nextjs/" title="Nextjs">
+                    <b>#</b> Nextjs
                   </a>
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/Nextjs/" title="Nextjs">
-                    <b>#</b> Nextjs
+                  <a href="/tags/SEO/" title="SEO">
+                    <b>#</b> SEO
                   </a>
                 </span>
                 
@@ -161,7 +159,6 @@
 <p>The Googlebot explores pages link by link, gathers information on website freshness, content uniqueness, number of backlinks, etc., downloads HTML and CSS files, and sends all of this data to Google servers. Then it’s analyzed and indexed by a system called Caffeine. This is a fully automatic process, so it’s vital to ensure that crawlers correctly understand the website content. And here’s where the problem appears. </p>
 <h2 id="What’s-wrong-with-optimizing-single-page-applications-SPA-for-search-engines"><a href="#What’s-wrong-with-optimizing-single-page-applications-SPA-for-search-engines" class="headerlink" title="What’s wrong with optimizing single-page applications (SPA) for search engines?"></a>What’s wrong with optimizing single-page applications (SPA) for search engines?</h2><p>Typically, single-page apps load pages on the client side: at first, the page is an empty container; then JavaScript pushes content to this container. The simplest HTML document for a React app might look as follows:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;title&gt;React App&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;noscript&gt;You need to enable JavaScript to run <span class="built_in">this</span> app.&lt;/noscript&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;root&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;/static/js/bundle.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
 <p>As you can see, there’s nothing except the <div> tag and an external script. Single-page applications need a browser to run a script, and only after the script is run will the content be dynamically loaded to the web page. So when a crawler visits the website, it sees an empty page without content. Hence, the page cannot be indexed. </p>
 <p>In autumn 2015, <a target="_blank" rel="noopener" href="https://webmasters.googleblog.com/2015/10/deprecating-our-ajax-crawling-scheme.html">Google announced</a> that their bots would also inspect the JavaScript and CSS of web pages, so they would be able to render and understand web pages like browsers do. That was great news, but there are still problems with SEO optimization:  </p>
 <ul>
@@ -245,7 +242,7 @@
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/NLP-difficult/" target="_self">
+              <a href="/HowToUseAxioswithReact/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -267,14 +264,14 @@
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/SEO/" title="SEO">
-                        <b>#</b> SEO
+                      <a href="/tags/Nextjs/" title="Nextjs">
+                        <b>#</b> Nextjs
                       </a>
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/Nextjs/" title="Nextjs">
-                        <b>#</b> Nextjs
+                      <a href="/tags/SEO/" title="SEO">
+                        <b>#</b> SEO
                       </a>
                     </span>
                     
@@ -289,7 +286,7 @@
           </div>
           <div class="post-foot-prev">
             
-              <a href="/LearnhowGatsbyworks/" target="_self">
+              <a href="/JavaScriptFetchAPI/" target="_self">
                 <span>Next</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>

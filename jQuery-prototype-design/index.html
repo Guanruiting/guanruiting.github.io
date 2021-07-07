@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -141,7 +139,6 @@
 <h3 id="jQuery共享原型对象"><a href="#jQuery共享原型对象" class="headerlink" title="jQuery共享原型对象"></a>jQuery共享原型对象</h3><p>我们在项目中引入jQuery框架后，可以通过<code>$.</code>或者<code>jQuery.</code>使用它提供的方法。这在jQuery中是怎么实现的呢？<br>jQuery共享原型设计：</p>
 <p><img src="/img/2019/04/jquery_prototype_design.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(function(root)&#123; </span><br><span class="line"></span><br><span class="line">    var jQuery &#x3D; function()&#123;   </span><br><span class="line">        &#x2F;&#x2F; 如果直接返回jQuery构造函数的实例对象，就会进入死循环</span><br><span class="line">        &#x2F;&#x2F; 返回jQuery原型上扩展的init方法的实例对象</span><br><span class="line">        return new jQuery.prototype.init();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    jQuery.prototype &#x3D; &#123;</span><br><span class="line">        init: function()&#123; </span><br><span class="line">            &#x2F;&#x2F;init方法作为构造函数</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; jQuery原型上的init构造函数与jQuery构造函数共享原型对象</span><br><span class="line">    jQuery.prototype.init.prototype &#x3D; jQuery.prototype</span><br><span class="line">    </span><br><span class="line">    root.$ &#x3D; root.jQuery &#x3D; jQuery</span><br><span class="line">    </span><br><span class="line">&#125;)(this);</span><br></pre></td></tr></table></figure>
-
 
       </div>
       

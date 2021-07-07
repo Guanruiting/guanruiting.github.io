@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -118,8 +116,8 @@
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/dot/" title="dot">
-                    <b>#</b> dot
+                  <a href="/tags/Dot/" title="Dot">
+                    <b>#</b> Dot
                   </a>
                 </span>
                 
@@ -133,57 +131,44 @@
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622163216158.png" alt="image-20210622163216158"></p>
 <h3 id="二、用命令行生成图片"><a href="#二、用命令行生成图片" class="headerlink" title="二、用命令行生成图片"></a>二、用命令行生成图片</h3><p>现在，你可以在电脑上创建一个demo.dot文本，写入图形代码:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph simple</span><br><span class="line">&#123;</span><br><span class="line">    a -- b -- c;</span><br><span class="line">    b -- d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在终端/命令行进入该.dot文件所在目录，通过命令把它转换为需要输出的格式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot demo.dot –Tpng –o demo.png</span><br></pre></td></tr></table></figure>
-
 <p>恭喜你！成功画了一个图！打开demo.png，你将会看到这个图：</p>
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/demo.svg"></p>
 <p>如果要输出svg格式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot demo.dot –Tsvg –o demo.svg</span><br></pre></td></tr></table></figure>
-
 <p>如果你使用VSCode编程，建议安装 Graphviz (dot) language support for Visual Studio Code 和 Graphviz Preview 插件：</p>
 <h3 id="二、使用dot语言画图"><a href="#二、使用dot语言画图" class="headerlink" title="二、使用dot语言画图"></a>二、使用dot语言画图</h3><h4 id="Demo1"><a href="#Demo1" class="headerlink" title="Demo1"></a>Demo1</h4><p>graph方法是使用没有箭头的线连接节点，你还可以更改图形方向、形状及文字格式，用Graphviz画思维导图：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">graph g &#123;</span><br><span class="line">    rankdir&#x3D;LR  &#x2F;&#x2F;方向左右</span><br><span class="line">    dot语言-&gt;&#123;简介,语法,示例&#125;</span><br><span class="line">    dot语言[shape&#x3D;box,fontcolor&#x3D;red]</span><br><span class="line">    简介[color&#x3D;red]</span><br><span class="line">    语法[color&#x3D;green]</span><br><span class="line">    示例[color&#x3D;blue]</span><br><span class="line">    简介-&gt;&#123;开源免费,UML绘图,导出svg&#125;</span><br><span class="line">    语法-&gt;&#123;&quot;digraph&quot;,&quot;graph&quot;&#125;</span><br><span class="line">    &quot;digraph&quot;-&gt;导向图[label&#x3D;可以制作带方向的导图]</span><br><span class="line">    &quot;graph&quot;-&gt;无向图[label&#x3D;可以制作不带方向的导图]</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622164656933.png" alt="image-20210622164656933"></p>
 <h4 id="Demo2"><a href="#Demo2" class="headerlink" title="Demo2"></a>Demo2</h4><p>使用“digraph”画有箭头的线：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">digraph &#123; a -&gt; b &#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165058213.png" alt="image-20210622165058213"></p>
 <h4 id="Demo3"><a href="#Demo3" class="headerlink" title="Demo3"></a>Demo3</h4><p>改变节点的形状和连接线样式：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line"></span><br><span class="line">  A [shape&#x3D;diamond]</span><br><span class="line">  B [shape&#x3D;box]</span><br><span class="line">  C [shape&#x3D;circle]</span><br><span class="line"></span><br><span class="line">  A -&gt; B [style&#x3D;dashed, color&#x3D;grey]</span><br><span class="line">  A -&gt; C [color&#x3D;&quot;black:invis:black&quot;]</span><br><span class="line">  A -&gt; D [penwidth&#x3D;5, arrowhead&#x3D;none]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165243138.png" alt="image-20210622165243138"></p>
 <h4 id="Demo4"><a href="#Demo4" class="headerlink" title="Demo4"></a>Demo4</h4><p>可以用来画流程图：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">digraph finite_state_machine &#123;</span><br><span class="line">    rankdir&#x3D;LR;</span><br><span class="line">    size&#x3D;&quot;8,5&quot;</span><br><span class="line"></span><br><span class="line">    node [shape &#x3D; doublecircle]; S;</span><br><span class="line">    node [shape &#x3D; point ]; qi</span><br><span class="line"></span><br><span class="line">    node [shape &#x3D; circle];</span><br><span class="line">    qi -&gt; S;</span><br><span class="line">    S  -&gt; q1 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    S  -&gt; S  [ label &#x3D; &quot;a&quot; ];</span><br><span class="line">    q1 -&gt; S  [ label &#x3D; &quot;haha&quot; ];</span><br><span class="line">    q1 -&gt; q2 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    q2 -&gt; q1 [ label &#x3D; &quot;b&quot; ];</span><br><span class="line">    q2 -&gt; q2 [ label &#x3D; &quot;b&quot; ];</span><br><span class="line">    q2 -&gt; q3 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">    q3 -&gt; q4 [ label &#x3D; &quot;next&quot; ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622165724800.png" alt="image-20210622165724800"></p>
 <h4 id="Demo5-1"><a href="#Demo5-1" class="headerlink" title="Demo5-1"></a>Demo5-1</h4><p>一棵简单的二叉树：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line">  A -&gt; &#123;B,C&#125;</span><br><span class="line">  B -&gt; &#123;D,E&#125;</span><br><span class="line">  C -&gt; &#123;F,G&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622170029325.png" alt="image-20210622170029325"></p>
 <h4 id="Demo5-2"><a href="#Demo5-2" class="headerlink" title="Demo5-2"></a>Demo5-2</h4><p>别忘了节点形状是可以改变的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">digraph D &#123;</span><br><span class="line">node [shape &#x3D; box];</span><br><span class="line">  A -&gt; &#123;B, C, D&#125; -&gt; &#123;F&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171626854.png" alt="image-20210622171626854"></p>
 <p>更多形状：</p>
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622204633195.png" alt="image-20210622204633195"></p>
 <h4 id="Demo6"><a href="#Demo6" class="headerlink" title="Demo6"></a>Demo6</h4><p>用html画表格：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">digraph html&#123;</span><br><span class="line">   mytable[shape &#x3D; none, margin &#x3D; 0, label &#x3D; &lt;</span><br><span class="line">   &lt;TABLE BORDER &#x3D; &quot;0&quot; CELLBORDER &#x3D; &quot;1&quot; CELLSPACING &#x3D; &quot;0&quot; CELLPADDING &#x3D; &quot;4&quot;&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;&lt;FONT COLOR &#x3D; &quot;red&quot;&gt;hello&lt;&#x2F;FONT&gt;&lt;BR&#x2F;&gt;world&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD COLSPAN &#x3D; &quot;3&quot;&gt;b&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;g&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD ROWSPAN &#x3D; &quot;3&quot;&gt;h&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD&gt;c&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD PORT &#x3D; &quot;here&quot;&gt;d&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;TD&gt;e&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;TR&gt;&lt;TD COLSPAN &#x3D; &quot;3&quot;&gt;f&lt;&#x2F;TD&gt;</span><br><span class="line">   &lt;&#x2F;TR&gt;</span><br><span class="line">   &lt;&#x2F;TABLE&gt;</span><br><span class="line">   &gt;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171048859.png" alt="image-20210622171048859"></p>
 <h4 id="Demo7"><a href="#Demo7" class="headerlink" title="Demo7"></a>Demo7</h4><p>使用rank把节点排列成对齐的行（列）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">digraph G&#123;</span><br><span class="line">   rankdir &#x3D; LR</span><br><span class="line">   &#123;</span><br><span class="line">    node[shape &#x3D; plaintext]</span><br><span class="line">    1995 -&gt; 1996 -&gt; 1997 -&gt; 1998 -&gt; 1999 -&gt; 2000 -&gt; 2001</span><br><span class="line">   &#125;</span><br><span class="line">   &#123;</span><br><span class="line">    node[shape &#x3D; box, style &#x3D; filled]</span><br><span class="line">    WAR3 -&gt; Xhero -&gt; Footman -&gt; DOTA</span><br><span class="line">    WAR3 -&gt; Battleship</span><br><span class="line">   &#125;</span><br><span class="line">   &#123;</span><br><span class="line">    &#123;rank &#x3D; same 1996 WAR3&#125;</span><br><span class="line">    &#123;rank &#x3D; same 1998 Xhero Battleship&#125;</span><br><span class="line">    &#123;rank &#x3D; same 1999 Footman&#125;</span><br><span class="line">    &#123;rank &#x3D; same 2001 DOTA&#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622171357857.png" alt="image-20210622171357857"></p>
 <h4 id="Demo8"><a href="#Demo8" class="headerlink" title="Demo8"></a>Demo8</h4><p>用控制符”n”,”ne”,”e”,”se”,”s”,”sw”,”w”和”nw”指定连接线的起止位置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">digraph G&#123;</span><br><span class="line">   node[shape &#x3D; box]</span><br><span class="line">   c:n -&gt; d[label &#x3D; n]</span><br><span class="line">   c1:ne -&gt; d1[label &#x3D; ne]</span><br><span class="line">   c2:e -&gt; d2[label &#x3D; e]</span><br><span class="line">   c3:se -&gt; d3[label &#x3D; se]</span><br><span class="line">   c4:s -&gt; d4[label &#x3D; s]</span><br><span class="line">   c5:sw -&gt; d5[label &#x3D; sw]</span><br><span class="line">   c6:w -&gt; d6[label &#x3D; w]</span><br><span class="line">   c7:nw -&gt; d7[label &#x3D; nw]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/demo8.png"></p>
 <h4 id="Demo9"><a href="#Demo9" class="headerlink" title="Demo9"></a>Demo9</h4><p>画流程图</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">digraph startgame &#123;</span><br><span class="line">    label&#x3D;&quot;游戏资源更新流程&quot;</span><br><span class="line">    rankdir&#x3D;&quot;TB&quot;</span><br><span class="line">    start[label&#x3D;&quot;启动游戏&quot; shape&#x3D;circle style&#x3D;filled]</span><br><span class="line">    ifwifi[label&#x3D;&quot;网络环境判断是否 WIFI&quot; shape&#x3D;diamond]</span><br><span class="line">    needupdate[label&#x3D;&quot;是否有资源需要更新&quot; shape&#x3D;diamond]</span><br><span class="line">    startslientdl[label&#x3D;&quot;静默下载&quot; shape&#x3D;box]</span><br><span class="line">    enterhall[label&#x3D;&quot;进入游戏大厅&quot; shape&#x3D;box]</span><br><span class="line"></span><br><span class="line">    enterroom[label&#x3D;&quot;进入房间&quot; shape&#x3D;box]</span><br><span class="line">    resourceuptodate[label&#x3D;&quot;资源不完整&quot; shape&#x3D;diamond]</span><br><span class="line">    startplay[label&#x3D;&quot;正常游戏&quot; shape&#x3D;circle fillcolor&#x3D;blue]</span><br><span class="line">    warning[label&#x3D;&quot;提醒玩家是否更新&quot; shape&#x3D;diamond]</span><br><span class="line">    startdl[label&#x3D;&quot;进入下载界面&quot; shape&#x3D;box]</span><br><span class="line">    &#x2F;&#x2F;&#123;rank&#x3D;same; needupdate, enterhall&#125;</span><br><span class="line"></span><br><span class="line">    &#123;shape&#x3D;diamond; ifwifi, needupdate&#125;</span><br><span class="line"></span><br><span class="line">    start -&gt; ifwifi</span><br><span class="line">    ifwifi-&gt;needupdate[label&#x3D;&quot;是&quot;]</span><br><span class="line">    ifwifi-&gt;enterhall[label&#x3D;&quot;否&quot;]</span><br><span class="line">    needupdate-&gt;startslientdl[label&#x3D;&quot;是&quot;]</span><br><span class="line">    startslientdl-&gt;enterhall</span><br><span class="line">    needupdate-&gt;enterhall[label&#x3D;&quot;否&quot;]</span><br><span class="line"></span><br><span class="line">    enterhall -&gt; enterroom</span><br><span class="line">    enterroom -&gt; resourceuptodate</span><br><span class="line">    resourceuptodate -&gt; warning[label&#x3D;&quot;是&quot;]</span><br><span class="line">    resourceuptodate -&gt; startplay[label&#x3D;&quot;否&quot;]</span><br><span class="line">    warning -&gt; startdl[label&#x3D;&quot;确认下载&quot;]</span><br><span class="line">    warning -&gt; enterhall[label&#x3D;&quot;取消下载&quot;]</span><br><span class="line">    startdl -&gt; enterhall[label&#x3D;&quot;取消下载&quot;]</span><br><span class="line">    startdl -&gt; startplay[label&#x3D;&quot;下载完成&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210622175352386.png" alt="image-20210622175352386"></p>
 <p>如果要近一步学会使用Graphviz画图，你一定要浏览这个repo：<a target="_blank" rel="noopener" href="https://github.com/huangz1990/redisbook1e-gallery">https://github.com/huangz1990/redisbook1e-gallery</a></p>
 <p>参考资料：</p>
@@ -202,7 +187,7 @@
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/JavaScriptFetchAPI/" target="_self">
+              <a href="/Using-Throttling-and-Debouncing-with-React-hooks/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -224,8 +209,8 @@
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/dot/" title="dot">
-                        <b>#</b> dot
+                      <a href="/tags/Dot/" title="Dot">
+                        <b>#</b> Dot
                       </a>
                     </span>
                     

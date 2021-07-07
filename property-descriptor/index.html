@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -129,7 +127,6 @@
       <div class="markdown-body">
         <p>假设有一个对象：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj &#x3D; &#123;</span><br><span class="line">  name:&quot;Book&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>关于这个对象的属性<code>name</code>，我们提出以下问题：</p>
 <ol>
 <li>它的值是什么？</li>
@@ -143,7 +140,6 @@
 <p>以上问题牵扯出了<em>【属性描述对象】</em>的概念。属性描述对象用来描述对象的属性，<strong>控制</strong>它的行为。每个属性都有自己对应的属性描述对象，保存该属性的一些元信息。</p>
 <p>一个属性描述对象例子（默认值）：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  value: undefined,    &#x2F;&#x2F; 该属性的属性值</span><br><span class="line">  writable: true,      &#x2F;&#x2F; 属性值是否可写</span><br><span class="line">  enumerable: true,    &#x2F;&#x2F; 该属性是否可遍历</span><br><span class="line">  configurable: true,  &#x2F;&#x2F; 可配置性，控制属性描述对象的可写性（是否可以被删除）</span><br><span class="line">  get: undefined,      &#x2F;&#x2F; 该属性的取值函数</span><br><span class="line">  set: undefined       &#x2F;&#x2F; 该属性的存值函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>这个属性描述对象里的属性称为<em>元属性</em>。</p>
 <p>参考： <a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/stdlib/attributes.html">属性描述对象</a></p>
 

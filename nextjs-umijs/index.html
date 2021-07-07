@@ -37,22 +37,23 @@
 
   
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Macshion" type="application/atom+xml">
 </head>
 
 
   <body>
     <div id="app">
-      <div class="header">
-  <div class="avatar">
+      <div class="flex-container header">
+    <div class="avatar">
     <a href="/">
-      <!-- 头像取消懒加载，添加no-lazy -->
       
         <img src="/images/avatar.png" alt="">
       
     </a>
-    <div class="nickname"><a href="/">Macshion</a></div>
+    <!-- <div class="nickname"><a href="/">Macshion</a></div> -->
   </div>
+    <div class="header-container">
+  
   <div class="navbar">
     <ul>
       
@@ -65,18 +66,15 @@
         </li>
       
         <li class="nav-item" data-path="/tags/">
-          <a href="/tags/">Tags</a>
+          <a href="/tags/">Categories</a>
         </li>
       
         <li class="nav-item" data-path="/friends/">
           <a href="/friends/">Links</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
-          <a href="/about/">About</a>
-        </li>
-      
     </ul>
+  </div>
   </div>
 </div>
 
@@ -118,14 +116,14 @@
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/Nextjs/" title="Nextjs">
-                    <b>#</b> Nextjs
+                  <a href="/tags/Umi/" title="Umi">
+                    <b>#</b> Umi
                   </a>
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/Umi/" title="Umi">
-                    <b>#</b> Umi
+                  <a href="/tags/Nextjs/" title="Nextjs">
+                    <b>#</b> Nextjs
                   </a>
                 </span>
                 
@@ -139,19 +137,14 @@
 <p>Along the way, I got curious about Umi and decided to look deeper into the framework to see how it compares with Next. I evaluated both frameworks based on the criteria listed below. Here are my findings.</p>
 <h2 id="CSS-support"><a href="#CSS-support" class="headerlink" title="CSS support"></a>CSS support</h2><p>Next has support for <a target="_blank" rel="noopener" href="https://nextjs.org/docs/basic-features/built-in-css-support">all CSS styling methods</a> including CSS in JS, Sass, Stylus, Less, CSS module and Post CSS. You can just import the css file into your pages in case of regular CSS:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; styles.css</span><br><span class="line">body &#123;</span><br><span class="line">  font-family: &#39;SF Pro Text&#39;, &#39;SF Pro Icons&#39;, &#39;Helvetica Neue&#39;, &#39;Helvetica&#39;,</span><br><span class="line">    &#39;Arial&#39;, sans-serif;</span><br><span class="line">  padding: 20px 20px 60px;</span><br><span class="line">  max-width: 680px;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; pages&#x2F;_app.js</span><br><span class="line">import &#39;..&#x2F;styles.css&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; This default export is required in a new &#96;pages&#x2F;_app.js&#96; file.</span><br><span class="line">export default function MyApp(&#123; Component, pageProps &#125;) &#123;</span><br><span class="line">  return &lt;Component &#123;...pageProps&#125; &#x2F;&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Next has official plugins for writing CSS using Sass, Stylus, and Less. If you’re using CSS modules, you’ll need to follow Next’s naming convention, <code>[name].module.css</code>.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Button.module.css</span><br><span class="line">&#x2F;*</span><br><span class="line">You do not need to worry about .error &#123;&#125; colliding with any other &#96;.css&#96; or</span><br><span class="line">&#96;.module.css&#96; files!</span><br><span class="line">*&#x2F;</span><br><span class="line">.error &#123;</span><br><span class="line">  color: white;</span><br><span class="line">  background-color: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Button.js</span><br><span class="line">import styles from &#39;.&#x2F;Button.module.css&#39;</span><br><span class="line"></span><br><span class="line">export function Button() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;button</span><br><span class="line">      type&#x3D;&quot;button&quot;</span><br><span class="line">      &#x2F;&#x2F; Note how the &quot;error&quot; class is accessed as a property on the imported</span><br><span class="line">      &#x2F;&#x2F; &#96;styles&#96; object.</span><br><span class="line">      className&#x3D;&#123;styles.error&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      Destroy</span><br><span class="line">    &lt;&#x2F;button&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Umi, on the other hand, has dropped support for Sass and currently supports regular CSS, CSS module, and Less. If you want to use Sass or Stylus, you’ll need to configure the webpack config to do so. Umi automatically recognizes the use of CSS modules.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Example of CSS Modules</span></span><br><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">&#x27;./foo.css&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example of Non-CSS Modules</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./foo.css&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
 <h2 id="webpack-customization"><a href="#webpack-customization" class="headerlink" title="webpack customization"></a>webpack customization</h2><p>Next features such as code splitting, hot code reloading, and server-side rendering already work out of the box. But if you need extra power or just a different configuration, Next allows you to write your own configuration through its <a target="_blank" rel="noopener" href="https://nextjs.org/docs/api-reference/next.config.js/introduction"><code>next.config.js</code></a> module. The config file is a regular Node.js module instead of a JSON file.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">/* config options here */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>Umi also has its <a target="_blank" rel="noopener" href="https://umijs.org/docs/config">own configuration file</a>, but it’s in the form of JSON file.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  base: <span class="string">&#x27;/docs/&#x27;</span>,</span><br><span class="line">  publicPath: <span class="string">&#x27;/static/&#x27;</span>,</span><br><span class="line">  hash: <span class="literal">true</span>,</span><br><span class="line">  history: &#123;</span><br><span class="line">    type: <span class="string">&#x27;hash&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><p>I found Next’s documentation to be more detailed in explaining how to use each feature.</p>
 <p>To show how each feature works, the docs walk you through building a simple blog app.</p>
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210325142751370.png" alt="image-20210325142751370"></p>
@@ -159,10 +152,8 @@
 <p><img src="https://raw.githubusercontent.com/macshion/PicBed/main/2021/image-20210325142834404.png" alt="image-20210325142834404"></p>
 <h2 id="CLI-support"><a href="#CLI-support" class="headerlink" title="CLI support"></a>CLI support</h2><p>Umi has some interesting CLI support to generate pages and check the current webpack configuration.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Usage: umi &lt;command&gt; [options]</span><br><span class="line"></span><br><span class="line">  Commands:</span><br><span class="line"></span><br><span class="line">    build     build application for production</span><br><span class="line">    config    umi config cli</span><br><span class="line">    dev       start a dev server for development</span><br><span class="line">    generate  generate code snippets quickly</span><br><span class="line">    help      show command helps</span><br><span class="line">    plugin    inspect umi plugins</span><br><span class="line">    version   show umi version</span><br><span class="line">    webpack   inspect webpack configurations</span><br><span class="line">    dva       </span><br><span class="line">    test      test with jest</span><br><span class="line"></span><br><span class="line">  Run &#96;umi help &lt;command&gt;&#96; for more information of specific commands.</span><br><span class="line">  Visit https:&#x2F;&#x2F;umijs.org&#x2F; to learn more about Umi.</span><br></pre></td></tr></table></figure>
-
 <p>Next’s CLI support is focused solely on helping you to deploy the application.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Usage</span><br><span class="line">  $ next &lt;command&gt;</span><br><span class="line"></span><br><span class="line">Available commands</span><br><span class="line">  build, start, export, dev, telemetry</span><br><span class="line"></span><br><span class="line">Options</span><br><span class="line">  --version, -v   Version number</span><br><span class="line">  --help, -h      Displays this message</span><br><span class="line"></span><br><span class="line">For more information run a command with the --help flag</span><br><span class="line">  $ next build --help</span><br></pre></td></tr></table></figure>
-
 <h2 id="Plugin-system"><a href="#Plugin-system" class="headerlink" title="Plugin system"></a>Plugin system</h2><p>Umi’s internal functions are all third-party plugins. The documentation covers how its <a target="_blank" rel="noopener" href="https://umijs.org/plugins/api">plugin system</a> works, complete with a <a target="_blank" rel="noopener" href="https://umijs.org/plugins/test">test framework</a>.</p>
 <p>Next has its own <a target="_blank" rel="noopener" href="https://github.com/vercel/next-plugins">set of plugins</a>, but I can’t seem to find instructions on how to create one and share it with other developers.</p>
 <h2 id="Why-Next-has-the-edge"><a href="#Why-Next-has-the-edge" class="headerlink" title="Why Next has the edge"></a>Why Next has the edge</h2><p>Both Next and Umi fully support building React applications for production with little to no configuration. Next has more complete support for writing CSS and customizing its webpack configuration, while Umi is more opinionated and doesn’t give much support for webpack configurations.</p>
@@ -196,14 +187,14 @@
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/Nextjs/" title="Nextjs">
-                        <b>#</b> Nextjs
+                      <a href="/tags/Umi/" title="Umi">
+                        <b>#</b> Umi
                       </a>
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/Umi/" title="Umi">
-                        <b>#</b> Umi
+                      <a href="/tags/Nextjs/" title="Nextjs">
+                        <b>#</b> Nextjs
                       </a>
                     </span>
                     
